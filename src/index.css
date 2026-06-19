@@ -72,6 +72,8 @@ textarea {
   gap: 1rem;
   max-width: 1100px;
   margin: 0 auto;
+  text-decoration: none;
+  color: inherit;
 }
 
 .header__logo {
@@ -81,9 +83,20 @@ textarea {
   height: 3rem;
   border-radius: 1rem;
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-  font-size: 1.25rem;
   box-shadow: 0 18px 40px rgba(99, 102, 241, 0.22);
+}
+
+.header__logo svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header__brand:hover .header__logo {
+  transform: translateY(-3px) scale(1.06);
+}
+
+.header__brand:hover h1 {
+  text-decoration: underline;
 }
 
 .header h1 {
@@ -256,15 +269,33 @@ textarea {
   margin-bottom: 1.25rem;
 }
 
-.field label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--muted);
+.field--toggle {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(115,126,241,0.14);
+  border-radius: 1rem;
 }
 
-.field select {
-  width: 100%;
+.field--toggle .toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.field--toggle .toggle input {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.field__hint {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.85rem;
   padding: 0.85rem 1rem;
   border-radius: 1rem;
   border: 1px solid rgba(115,126,241,0.18);
@@ -309,6 +340,19 @@ textarea {
   padding: 0.9rem 1rem;
   border-radius: 1rem;
   margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.message--info {
+  background: rgba(56, 189, 248, 0.1);
+  color: #dbeafe;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+}
+
+.message--warning {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fef3c7;
+  border: 1px solid rgba(245, 158, 11, 0.24);
 }
 
 .message--error {
@@ -383,4 +427,157 @@ textarea {
 
 .panel--result .btn--primary {
   margin-top: 1rem;
+}
+
+.panel__hint {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.file-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.panel__hint {
+  margin: 0.75rem 0 0;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.panel__head > div,
+.panel__head > .btn-group {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .btn-group {
+    flex-direction: column;
+  }
+}
+
+.file-item {
+  appearance: none;
+  border: 1px solid rgba(115,126,241,0.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  padding: 0.65rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.file-item--active {
+  background: rgba(99,102,241,0.18);
+  border-color: rgba(139,92,246,0.35);
+}
+
+.recommendation {
+  margin-bottom: 1rem;
+  color: #c4c9d8;
+  font-size: 0.95rem;
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.preset-button {
+  font-size: 0.85rem;
+  padding: 0.6rem 0.85rem;
+}
+
+.preset-button--active {
+  background: rgba(99,102,241,0.2);
+  border-color: rgba(139,92,246,0.45);
+}
+
+.field-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.compare-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem 0;
+}
+
+.result-file-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.result-file {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(115,126,241,0.14);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.result-file--active {
+  background: rgba(99,102,241,0.18);
+  border-color: rgba(139,92,246,0.35);
+}
+
+.result-file small {
+  color: var(--muted);
+}
+
+.compare-label {
+  display: block;
+  padding: 0.9rem 1rem 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.compare-image {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.meta--result {
+  margin-top: 1rem;
+}
+
+@media (max-width: 920px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -92,7 +92,7 @@ export const FORMATS: Record<ImageFormat, FormatInfo> = {
     extension: 'heic',
     lossy: true,
     canInput: true,
-    canOutput: true,
+    canOutput: false,
   },
   heif: {
     id: 'heif',
@@ -101,7 +101,7 @@ export const FORMATS: Record<ImageFormat, FormatInfo> = {
     extension: 'heif',
     lossy: true,
     canInput: true,
-    canOutput: true,
+    canOutput: false,
   },
   tiff: {
     id: 'tiff',
@@ -119,13 +119,31 @@ export const FORMATS: Record<ImageFormat, FormatInfo> = {
     extension: 'svg',
     lossy: false,
     canInput: true,
-    canOutput: true,
+    canOutput: false,
   },
 
 }
 
 export const OUTPUT_FORMATS = Object.values(FORMATS).filter((f) => f.canOutput)
 export const INPUT_FORMATS = Object.values(FORMATS).filter((f) => f.canInput)
+
+export function recommendOutputFormat(inputFormat: ImageFormat): ImageFormat {
+  switch (inputFormat) {
+    case 'png':
+    case 'svg':
+      return 'png'
+    case 'gif':
+      return 'gif'
+    case 'bmp':
+    case 'ico':
+    case 'heic':
+    case 'heif':
+    case 'tiff':
+      return 'webp'
+    default:
+      return 'avif'
+  }
+}
 
 const EXTENSION_MAP: Record<string, ImageFormat> = {
   jpg: 'jpeg',
