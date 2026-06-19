@@ -24,12 +24,7 @@ npm run build
 npm run preview
 ```
 
-Deploy the `dist/` folder to Vercel, Netlify, GitHub Pages, or any static host.
-
-## Deployment
-
-- **Vercel / Netlify**: connect the repo, build command `npm run build`, output directory `dist`
-- **GitHub Pages**: set `base: '/repo-name/'` in `vite.config.ts` if serving from a subpath
+Deploy the `dist/` folder to any static host.
 
 ## Stack
 

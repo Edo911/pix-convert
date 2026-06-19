@@ -1,5 +1,3 @@
-import heic2any from 'heic2any'
-import UTIF from 'utif'
 import {
   detectFormat,
   FORMATS,
@@ -10,6 +8,8 @@ import { encodeBmp, encodeGif, encodeIco } from './encoders'
 export interface ConvertOptions {
   outputFormat: ImageFormat
   quality: number
+  maxWidth?: number
+  maxHeight?: number
 }
 
 export interface ConvertResult {
@@ -19,6 +19,7 @@ export interface ConvertResult {
   width: number
   height: number
   fileName: string
+  originalSize: number
 }
 
 export class ConversionError extends Error {
@@ -44,8 +45,14 @@ function checkMimeSupport(mime: string): boolean {
   return supported
 }
 
+export function isOutputFormatSupported(format: ImageFormat): boolean {
+  const info = FORMATS[format]
+  return info.canOutput && checkMimeSupport(info.mime)
+}
+
 async function decodeHeic(buffer: ArrayBuffer): Promise<Blob> {
   try {
+    const { default: heic2any } = await import('heic2any')
     const result = await heic2any({
       blob: new Blob([buffer], { type: 'image/heic' }),
       toType: 'image/png',
@@ -58,8 +65,9 @@ async function decodeHeic(buffer: ArrayBuffer): Promise<Blob> {
   }
 }
 
-function decodeTiff(buffer: ArrayBuffer): HTMLCanvasElement {
+async function decodeTiff(buffer: ArrayBuffer): Promise<HTMLCanvasElement> {
   try {
+    const { default: UTIF } = await import('utif')
     const ifds = UTIF.decode(buffer)
     if (!ifds.length) throw new Error('empty')
     UTIF.decodeImage(buffer, ifds[0])
@@ -141,6 +149,37 @@ function validateCanvas(canvas: HTMLCanvasElement): void {
   }
 }
 
+function resizeCanvas(canvas: HTMLCanvasElement, maxWidth?: number, maxHeight?: number): HTMLCanvasElement {
+  if (!maxWidth && !maxHeight) return canvas
+  const width = canvas.width
+  const height = canvas.height
+  const ratio = width / height
+  let targetWidth = width
+  let targetHeight = height
+
+  if (maxWidth && targetWidth > maxWidth) {
+    targetWidth = maxWidth
+    targetHeight = Math.round(maxWidth / ratio)
+  }
+
+  if (maxHeight && targetHeight > maxHeight) {
+    targetHeight = maxHeight
+    targetWidth = Math.round(maxHeight * ratio)
+  }
+
+  if (targetWidth === width && targetHeight === height) {
+    return canvas
+  }
+
+  const output = document.createElement('canvas')
+  output.width = targetWidth
+  output.height = targetHeight
+  const ctx = output.getContext('2d')
+  if (!ctx) throw new ConversionError('Failed to resize image.')
+  ctx.drawImage(canvas, 0, 0, targetWidth, targetHeight)
+  return output
+}
+
 function canvasToBlob(canvas: HTMLCanvasElement, mime: string, quality: number): Promise<Blob> {
   return new Promise((resolve, reject) => {
     canvas.toBlob(
@@ -218,22 +257,20 @@ export async function convertImage(file: File, options: ConvertOptions): Promise
     )
   }
 
-  if (detected === options.outputFormat) {
-    throw new ConversionError('Input and output formats are the same. Choose a different output format.')
-  }
-
   const canvas = await decodeToCanvas(file, buffer, detected)
   validateCanvas(canvas)
 
-  const blob = await encodeCanvas(canvas, options.outputFormat, options.quality)
+  const outputCanvas = resizeCanvas(canvas, options.maxWidth, options.maxHeight)
+  const blob = await encodeCanvas(outputCanvas, options.outputFormat, options.quality)
 
   return {
     blob,
     inputFormat: detected,
     outputFormat: options.outputFormat,
-    width: canvas.width,
-    height: canvas.height,
+    width: outputCanvas.width,
+    height: outputCanvas.height,
     fileName: buildOutputName(file.name, options.outputFormat),
+    originalSize: file.size,
   }
 }
 

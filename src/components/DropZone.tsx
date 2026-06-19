@@ -2,7 +2,7 @@ import { useCallback, useRef, useState } from 'react'
 import { formatBytes } from '../lib/formats'
 
 interface DropZoneProps {
-  onFileSelect: (file: File) => void
+  onFileSelect: (files: File[]) => void
   disabled?: boolean
 }
 
@@ -11,8 +11,10 @@ export function DropZone({ onFileSelect, disabled }: DropZoneProps) {
   const [dragging, setDragging] = useState(false)
 
   const handleFile = useCallback(
-    (file: File | undefined) => {
-      if (file && !disabled) onFileSelect(file)
+    (fileList: FileList | File[] | undefined) => {
+      if (disabled || !fileList || fileList.length === 0) return
+      const files = Array.isArray(fileList) ? fileList : Array.from(fileList)
+      onFileSelect(files)
     },
     [disabled, onFileSelect],
   )
@@ -21,7 +23,7 @@ export function DropZone({ onFileSelect, disabled }: DropZoneProps) {
     (event: React.DragEvent) => {
       event.preventDefault()
       setDragging(false)
-      handleFile(event.dataTransfer.files[0])
+      handleFile(event.dataTransfer.files)
     },
     [handleFile],
   )
@@ -50,7 +52,8 @@ export function DropZone({ onFileSelect, disabled }: DropZoneProps) {
         type="file"
         accept="image/*,.heic,.heif,.tif,.tiff"
         hidden
-        onChange={(e) => handleFile(e.target.files?.[0])}
+        multiple
+        onChange={(e) => handleFile(e.target.files ?? undefined)}
       />
       <div className="dropzone__icon" aria-hidden="true">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -59,9 +62,9 @@ export function DropZone({ onFileSelect, disabled }: DropZoneProps) {
           <path d="M6 32l10-10 8 8 6-6 12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </div>
-      <p className="dropzone__title">Drop an image here</p>
-      <p className="dropzone__hint">or click to browse · up to {formatBytes(50 * 1024 * 1024)}</p>
-      <p className="dropzone__formats">JPEG · PNG · WebP · AVIF · GIF · BMP · HEIC · TIFF · ICO · SVG</p>
+      <p className="dropzone__title">Drag images here or click to select files</p>
+      <p className="dropzone__hint">Supports files up to {formatBytes(50 * 1024 * 1024)}.</p>
+      <p className="dropzone__formats">JPEG · PNG · WebP · AVIF · GIF · BMP · HEIC · HEIF · TIFF · ICO · SVG</p>
     </div>
   )
 }
