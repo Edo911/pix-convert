@@ -46,19 +46,19 @@ Unlike many image conversion tools, PixConvert performs all processing locally. 
 
 ## Main Interface
 
-![PixConvert Screenshot 1](https://github.com/Edo911/pix-convert/blob/main/1.jpeg.png)
+![PixConvert Screenshot 1](https://github.com/Edo911/pix-convert/blob/main/public/1.jpeg.png)
 
 ## Format Selection
 
-![PixConvert Screenshot 2](https://github.com/Edo911/pix-convert/blob/main/2.jpeg.png)
+![PixConvert Screenshot 2](https://github.com/Edo911/pix-convert/blob/main/public/2.jpeg.png)
 
 ## Conversion Process
 
-![PixConvert Screenshot 3](https://github.com/Edo911/pix-convert/blob/main/3.jpeg.png)
+![PixConvert Screenshot 3](https://github.com/Edo911/pix-convert/blob/main/public/3.jpeg.png)
 
 ## Download Result
 
-![PixConvert Screenshot 4](https://github.com/Edo911/pix-convert/blob/main/4.jpeg.png)
+![PixConvert Screenshot 4](https://github.com/Edo911/pix-convert/blob/main/public/4.jpeg.png)
 
 ---
 
