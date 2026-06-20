@@ -1,6 +1,6 @@
 # PixConvert — Free Online Image Converter (JPEG, PNG, WebP, AVIF, HEIC, TIFF, GIF, SVG)
 
-![PixConvert Screenshot](https://raw.githubusercontent.com/Edo911/pix-convert/main/1.jpeg.png)
+![PixConvert Screenshot](https://github.com/Edo911/pix-convert/blob/main/public/1.jpeg.png)
 
 <p align="center">
   <strong>Fast, privacy-first image converter for JPEG, PNG, WebP, AVIF, HEIC, HEIF, TIFF, GIF, BMP, ICO, and SVG.</strong><br>
