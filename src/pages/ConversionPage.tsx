@@ -7,6 +7,8 @@ import type { ConversionRoute } from './conversions'
 import { getConversionCount } from '../lib/stats'
 import { getRelatedPostsForPath } from '../lib/blog-links'
 
+const BASE = 'https://pix-convert-seven.vercel.app'
+
 interface ConversionPageProps {
   route: ConversionRoute
 }
@@ -75,6 +77,29 @@ export function ConversionPage({ route }: ConversionPageProps) {
           { label: `Convert ${route.fromFormat} to ${route.toFormat}` },
         ]}
       />
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'Article',
+              headline: route.title,
+              description: route.description,
+              author: { '@type': 'Organization', name: 'PixConvert' },
+              publisher: { '@type': 'Organization', name: 'PixConvert', logo: { '@type': 'ImageObject', url: `${BASE}/favicon.svg` } },
+            },
+            {
+              '@type': 'Product',
+              name: `Convert ${route.fromFormat} to ${route.toFormat} Online Tool`,
+              description: route.description,
+              offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
+              applicationCategory: 'Multimedia',
+              operatingSystem: 'Web',
+            },
+          ],
+        })}
+      </script>
 
       <section className="conversion-hero">
         <h1 className="conversion-hero__title">Convert {route.fromFormat} to {route.toFormat} Online</h1>

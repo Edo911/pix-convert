@@ -6,6 +6,8 @@ import { conversionRoutes } from './conversions'
 import { blogPosts } from './blog/blog-posts'
 import { getConversionCount } from '../lib/stats'
 
+const BASE = 'https://pix-convert-seven.vercel.app'
+
 export function Home() {
   return (
     <>
@@ -14,6 +16,23 @@ export function Home() {
         description="Fast, free, and private online image converter. Convert HEIC to JPG, PNG to JPG, WebP to PNG, AVIF, TIFF, and more. 100% browser-based — no uploads, no signup."
         keywords="free image converter, online image converter, HEIC to JPG, PNG to JPG, JPG to PNG, WebP converter, AVIF converter, TIFF converter, SVG converter, privacy-first image converter"
       />
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: 'Image Conversion Tools',
+          description: 'Free online image conversion tools for all popular formats',
+          url: BASE,
+          numberOfItems: conversionRoutes.length,
+          itemListElement: conversionRoutes.map((r, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: `Convert ${r.fromFormat} to ${r.toFormat}`,
+            url: `${BASE}${r.path}`,
+          })),
+        })}
+      </script>
 
       <Breadcrumbs items={[{ label: 'Home' }]} />
 

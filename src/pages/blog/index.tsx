@@ -43,18 +43,35 @@ export function BlogIndex() {
       <script type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'Blog',
-          name: 'PixConvert Blog',
-          description: 'Expert guides on image formats, compression, and conversion.',
-          url: `${BASE}/blog`,
-          publisher: { '@type': 'Organization', name: 'PixConvert', logo: { '@type': 'ImageObject', url: `${BASE}/favicon.svg` } },
-          blogPost: blogPosts.map((p) => ({
-            '@type': 'BlogPosting',
-            headline: p.title,
-            description: p.description,
-            url: `${BASE}/blog/${p.slug}`,
-            datePublished: p.date,
-          })),
+          '@graph': [
+            {
+              '@type': 'CollectionPage',
+              name: 'PixConvert Blog',
+              description: 'Expert guides on image formats, compression, and conversion.',
+              url: `${BASE}/blog`,
+              publisher: { '@type': 'Organization', name: 'PixConvert', logo: { '@type': 'ImageObject', url: `${BASE}/favicon.svg` } },
+              mainEntity: {
+                '@type': 'ItemList',
+                itemListElement: blogPosts.map((p, i) => ({
+                  '@type': 'ListItem',
+                  position: i + 1,
+                  url: `${BASE}/blog/${p.slug}`,
+                })),
+              },
+            },
+            {
+              '@type': 'Blog',
+              name: 'PixConvert Blog',
+              url: `${BASE}/blog`,
+              blogPost: blogPosts.map((p) => ({
+                '@type': 'BlogPosting',
+                headline: p.title,
+                description: p.description,
+                url: `${BASE}/blog/${p.slug}`,
+                datePublished: p.date,
+              })),
+            },
+          ],
         })}
       </script>
 
@@ -153,6 +170,8 @@ export function BlogArticle({ slug }: { slug: string }) {
           },
           image: post.image ? `${BASE}${post.image}` : undefined,
           mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+          speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.blog-article__title', '.blog-article__desc'] },
+          about: { '@type': 'Thing', name: post.keywords ? post.keywords.split(', ')[0] : 'Image Formats' },
         })}
       </script>
 

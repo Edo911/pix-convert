@@ -1319,3 +1319,56 @@ details[open] .faq-item__question::after {
 .blog-sources__link:hover {
   text-decoration: underline;
 }
+
+.panel--history {
+  margin-top: 1.5rem;
+}
+
+.history-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(115,126,241,0.12);
+  background: rgba(255,255,255,0.03);
+}
+
+.history-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.history-item__formats {
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.history-item__meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-item__date {
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.dropzone--active {
+  border-color: #a78bfa;
+  background: rgba(99, 102, 241, 0.12);
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(139,92,246,0.2);
+}

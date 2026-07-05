@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { zipSync } from 'fflate'
 import { incrementConversionCount } from '../lib/stats'
+import { addToHistory, getHistory, type HistoryEntry } from '../lib/history'
 import { DropZone } from './DropZone'
 import { FormatSelector } from './FormatSelector'
 import {
@@ -250,6 +251,20 @@ export function Converter({ fromHint, toHint }: ConverterProps) {
         setProgress({ current: index + 1, total: files.length })
       }
       incrementConversionCount()
+      const now = Date.now()
+      converted.forEach((r, idx) => {
+        addToHistory({
+          id: `${now}-${idx}`,
+          fromFormat: r.inputFormat,
+          toFormat: r.outputFormat,
+          inputSize: r.originalSize,
+          outputSize: r.blob.size,
+          width: r.width,
+          height: r.height,
+          fileName: r.fileName,
+          timestamp: now,
+        })
+      })
       setBatchResults(converted)
       setSelectedResultIndex(0)
       setResult(converted[0])
@@ -516,6 +531,24 @@ export function Converter({ fromHint, toHint }: ConverterProps) {
                   <dd>{formatBytes(result.originalSize)}</dd>
                 </div>
               </dl>
+            </section>
+          )}
+          {getHistory().length > 0 && (
+            <section className="panel panel--history">
+              <div className="panel__head">
+                <h2>Recent Conversions</h2>
+              </div>
+              <div className="history-list">
+                {getHistory().slice(0, 5).map((entry) => (
+                  <div key={entry.id} className="history-item">
+                    <div className="history-item__info">
+                      <strong className="history-item__formats">{entry.fromFormat.toUpperCase()} → {entry.toFormat.toUpperCase()}</strong>
+                      <span className="history-item__meta">{entry.fileName} · {formatBytes(entry.outputSize)}</span>
+                    </div>
+                    <span className="history-item__date">{new Date(entry.timestamp).toLocaleDateString()}</span>
+                  </div>
+                ))}
+              </div>
             </section>
           )}
         </div>
