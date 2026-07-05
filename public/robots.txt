@@ -74,3 +74,4 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://pix-convert-seven.vercel.app/sitemap.xml
+Sitemap: https://pix-convert-seven.vercel.app/image-sitemap.xml

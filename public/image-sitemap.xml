@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/heic-vs-jpg-complete-guide</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/heic-vs-jpg-complete-guide.svg</image:loc>
+      <image:caption>HEIC vs JPG comparison chart showing file size, quality, and compatibility differences</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-convert-heic-to-jpg-on-windows</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-convert-heic-to-jpg-on-windows.svg</image:loc>
+      <image:caption>Windows HEIC to JPG conversion tutorial with step-by-step instructions</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/png-vs-jpg-best-for-web</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/png-vs-jpg-best-for-web.svg</image:loc>
+      <image:caption>PNG vs JPG comparison for web design showing quality and transparency differences</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/what-is-avif-format</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/what-is-avif-format.svg</image:loc>
+      <image:caption>AVIF image format explanation with AV1 compression technology overview</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/webp-vs-png-vs-jpg</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/webp-vs-png-vs-jpg.svg</image:loc>
+      <image:caption>WebP vs PNG vs JPG comparison showing file sizes and browser support</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/heic-to-jpg-on-mac</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/heic-to-jpg-on-mac.svg</image:loc>
+      <image:caption>Mac HEIC to JPG conversion using Preview and Photos apps</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/lossless-vs-lossy-image-compression</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/lossless-vs-lossy-image-compression.svg</image:loc>
+      <image:caption>Lossless vs lossy image compression quality and file size comparison</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/best-image-format-for-social-media</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/best-image-format-for-social-media.svg</image:loc>
+      <image:caption>Social media image format recommendations for Instagram, Facebook, Twitter, LinkedIn</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-open-heic-files-on-android</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-open-heic-files-on-android.svg</image:loc>
+      <image:caption>How to open HEIC iPhone photos on Android Samsung Galaxy and Google Pixel</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/tiff-vs-png-vs-jpeg-scanning</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/tiff-vs-png-vs-jpeg-scanning.svg</image:loc>
+      <image:caption>TIFF vs PNG vs JPEG scanning format comparison for documents at 300 DPI</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/svg-vs-png-web-design</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/svg-vs-png-web-design.svg</image:loc>
+      <image:caption>SVG vs PNG comparison for web design showing vector versus raster graphics</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/gif-vs-png-vs-webp-animation</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/gif-vs-png-vs-webp-animation.svg</image:loc>
+      <image:caption>GIF vs animated PNG vs animated WebP quality and file size comparison</image:caption>
+    </image:image>
+  </url>
+</urlset>

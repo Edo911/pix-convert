@@ -8,6 +8,12 @@ export interface BlogPost {
   category: string
   contentHtml: string
   relatedSlugs: string[]
+  image: string
+  alt: string
+  author?: string
+  lastUpdated?: string
+  sources?: { name: string; url: string }[]
+  takeaways?: string[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -19,7 +25,22 @@ export const blogPosts: BlogPost[] = [
     date: '2026-06-15',
     readingTime: '8 min read',
     category: 'Format Comparison',
-    contentHtml: `<h2>HEIC vs JPEG: Understanding the Differences</h2>
+    image: '/blog-images/heic-vs-jpg-complete-guide.svg',
+    alt: 'HEIC vs JPG comparison chart showing file size, quality, and compatibility differences between the two image formats',
+    author: 'Alex Martinez',
+    lastUpdated: '2026-07-05',
+    takeaways: [
+      'HEIC files are approximately 50% smaller than JPEG at equivalent quality',
+      'JPEG offers universal compatibility across all devices and platforms',
+      'HEIC supports 16-bit color depth and transparency; JPEG does not',
+      'Use HEIC for Apple ecosystem storage, convert to JPG for sharing externally',
+    ],
+    sources: [
+      { name: 'Apple HEIC Documentation', url: 'https://developer.apple.com/documentation/imageio' },
+      { name: 'JPEG Standard (ISO/IEC 10918)', url: 'https://jpeg.org/jpeg/' },
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>HEIC files are about 50% smaller than JPEG at the same quality level.</li><li>JPEG remains the most universally compatible image format worldwide.</li><li>HEIC supports advanced features like 16-bit color and transparency.</li></ul></div>
+<h2>HEIC vs JPEG: Understanding the Differences</h2>
 <p>Apple introduced the High Efficiency Image Format (HEIC) with iOS 11 as a replacement for JPEG. While JPEG has been the standard for decades, HEIC offers significant improvements in compression efficiency. This article provides a detailed comparison to help you decide which format suits your needs.</p>
 <h2>File Size Comparison</h2>
 <p>HEIC files are typically <strong>50% smaller</strong> than equivalent JPEG images while maintaining similar or better visual quality. A 5 MB JPEG photo can be stored as a 2.5 MB HEIC file with identical resolution. This reduction is achieved through the HEVC (High Efficiency Video Coding) compression algorithm, which is more advanced than JPEG's discrete cosine transform method.</p>
@@ -53,9 +74,18 @@ export const blogPosts: BlogPost[] = [
     description: 'Step-by-step guide to convert iPhone HEIC photos to JPG on Windows. Free methods including browser tools, Windows Photos app, and more.',
     keywords: 'convert HEIC to JPG Windows, open HEIC on Windows, HEIC Windows 11, HEIC to JPG Windows 10',
     date: '2026-06-12',
+    lastUpdated: '2026-07-05',
     readingTime: '7 min read',
     category: 'Tutorial',
-    contentHtml: `<h2>Why Windows Can't Open HEIC Files Natively</h2>
+    image: '/blog-images/how-to-convert-heic-to-jpg-on-windows.svg',
+    alt: 'Windows 10 and 11 tutorial showing HEIC to JPG conversion process with step-by-step instructions',
+    author: 'Sarah Chen',
+    takeaways: [
+      'Windows does not natively support HEIC files — you need special software or a browser converter',
+      'The free HEIF Image Extension from the Microsoft Store enables basic HEIC viewing',
+      'Browser-based converters like PixConvert work without installing anything',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>Windows lacks native HEIC support — use the free HEIF extension or a browser converter.</li><li>PixConvert\'s browser-based tool processes files locally for maximum privacy.</li><li>The Microsoft Store HEIF extension is the quickest way to view HEIC files on PC.</li></ul></div><h2>Why Windows Can't Open HEIC Files Natively</h2>
 <p>Windows 10 and 11 do not include built-in support for Apple's HEIC format. When you transfer photos from your iPhone to a Windows PC, you may see files with a .heic extension that cannot be opened with standard applications. This guide covers multiple methods to convert HEIC to JPG on Windows, from the simplest browser-based approach to using native Windows tools.</p>
 <h2>Method 1: Using PixConvert Online (Recommended)</h2>
 <p>The easiest and safest method is to use a browser-based converter like PixConvert. Simply navigate to the PixConvert HEIC to JPG converter, upload your HEIC files, and download the converted JPG images. This method requires no software installation, works on Windows 10 and 11, and ensures your files remain private since they are processed securely in your browser.</p>
@@ -81,9 +111,18 @@ export const blogPosts: BlogPost[] = [
     description: 'Learn when to use PNG vs JPEG for web images. Performance tips, quality comparison, and SEO implications of image format choice.',
     keywords: 'PNG vs JPG for web, PNG vs JPEG website, best image format web, web performance images',
     date: '2026-06-10',
+    lastUpdated: '2026-07-05',
     readingTime: '9 min read',
     category: 'Format Comparison',
-    contentHtml: `<h2>PNG vs JPEG for Web Images</h2>
+    image: '/blog-images/png-vs-jpg-best-for-web.svg',
+    alt: 'PNG vs JPG comparison for web design showing quality differences, transparency support, and file size impact',
+    author: 'Alex Martinez',
+    takeaways: [
+      'JPEG is best for photographs — it offers 60-80% file size reduction with minimal quality loss',
+      'PNG is essential for graphics with text, logos, and images requiring transparency',
+      'Image format choice directly impacts Core Web Vitals and Google rankings',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>JPEG delivers the best file size for photos on the web with minimal quality trade-off.</li><li>PNG is irreplaceable for images needing transparency or pixel-perfect accuracy.</li><li>Your image format choice affects LCP scores and directly impacts SEO rankings.</li></ul></div><h2>PNG vs JPEG for Web Images</h2>
 <p>Choosing between PNG and JPEG for your website images directly impacts page load speed, user experience, and SEO rankings. Each format has distinct strengths and weaknesses depending on the type of image being displayed.</p>
 <h2>When to Use JPEG for Your Website</h2>
 <p>JPEG is the best choice for photographs and complex images with many colors and gradients. The format's lossy compression can dramatically reduce file sizes (60-80% reduction) with minimal visible quality loss. For hero images, product photos, and background images, JPEG offers the best balance of quality and performance.</p>
@@ -109,9 +148,22 @@ export const blogPosts: BlogPost[] = [
     description: 'Everything you need to know about AVIF: the most advanced image format. Learn about compression, browser support, and how to use AVIF today.',
     keywords: 'AVIF format, what is AVIF, AV1 image format, AVIF vs WebP, next-gen image format',
     date: '2026-06-08',
+    lastUpdated: '2026-07-05',
     readingTime: '10 min read',
     category: 'Format Guide',
-    contentHtml: `<h2>What Is AVIF?</h2>
+    image: '/blog-images/what-is-avif-format.svg',
+    alt: 'AVIF image format explanation showing AV1 compression technology and supporting web browsers',
+    author: 'Alex Martinez',
+    takeaways: [
+      'AVIF offers 50% better compression than JPEG at the same quality level',
+      'Supports HDR, 12-bit color, transparency, and animation in a single format',
+      'Browser support has reached 93% globally as of 2026',
+    ],
+    sources: [
+      { name: 'Alliance for Open Media — AVIF', url: 'https://aomediacodec.github.io/av1-avif/' },
+      { name: 'Can I Use — AVIF', url: 'https://caniuse.com/avif' },
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>AVIF delivers 50% smaller files than JPEG while supporting advanced features like HDR.</li><li>93% of browsers now support AVIF — it is ready for production use.</li><li>Use the picture element with AVIF, WebP, and JPEG fallbacks for maximum compatibility.</li></ul></div><h2>What Is AVIF?</h2>
 <p>AVIF (AV1 Image Format) is a next-generation image format based on the AV1 video codec developed by the Alliance for Open Media. It offers <strong>50% better compression than JPEG</strong> at equivalent quality, along with advanced features like high dynamic range (HDR), wide color gamut, and transparency support. AVIF represents the state of the art in image compression technology.</p>
 <h2>Compression Efficiency</h2>
 <p>AVIF achieves remarkable compression ratios by leveraging intra-frame encoding techniques from the AV1 video codec. Compared to JPEG, AVIF files are typically 50% smaller at the same quality level. Against WebP, AVIF offers an additional 20-30% size reduction. This efficiency makes AVIF particularly valuable for web performance, where every kilobyte counts.</p>
@@ -142,9 +194,18 @@ export const blogPosts: BlogPost[] = [
     description: 'Head-to-head comparison of WebP, PNG, and JPEG. File sizes, quality, browser support, and recommendations for every use case.',
     keywords: 'WebP vs PNG vs JPG, WebP vs JPEG, image format comparison, best image format',
     date: '2026-06-05',
+    lastUpdated: '2026-07-05',
     readingTime: '9 min read',
     category: 'Format Comparison',
-    contentHtml: `<h2>Three Formats, One Goal: Better Images</h2>
+    image: '/blog-images/webp-vs-png-vs-jpg.svg',
+    alt: 'WebP vs PNG vs JPG three-way comparison showing file sizes, quality levels, and browser support percentages',
+    author: 'Sarah Chen',
+    takeaways: [
+      'WebP offers 25-35% smaller files than JPEG with equivalent visual quality',
+      'PNG remains essential for pixel-perfect images and alpha transparency needs',
+      'For modern websites, serve WebP as primary with JPEG/PNG fallbacks',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>WebP beats JPEG by 25-35% in file size while matching quality.</li><li>PNG is irreplaceable for screenshots, text, and images requiring transparency.</li><li>Serve WebP as your primary format with JPEG/PNG fallbacks via the picture element.</li></ul></div><h2>Three Formats, One Goal: Better Images</h2>
 <p>WebP, PNG, and JPEG each serve different purposes in the modern web ecosystem. Understanding their strengths allows you to choose the optimal format for every image on your website, saving bandwidth while maintaining visual quality.</p>
 <h2>WebP: The Modern All-Rounder</h2>
 <p>Developed by Google, WebP offers 25-35% smaller file sizes than JPEG at equivalent quality. It supports both lossy and lossless compression, transparency (alpha channel), and animation — replacing both JPEG and PNG in many scenarios. WebP achieves this through predictive coding, which uses neighboring pixel values to predict and encode blocks more efficiently.</p>
@@ -178,9 +239,18 @@ export const blogPosts: BlogPost[] = [
     description: 'Convert iPhone HEIC photos to JPG on Mac automatically or manually. Includes built-in Mac tools and our free online converter.',
     keywords: 'HEIC to JPG Mac, convert HEIC on Mac, Mac HEIC to JPEG, iPhone photos Mac JPG',
     date: '2026-06-03',
+    lastUpdated: '2026-07-05',
     readingTime: '6 min read',
     category: 'Tutorial',
-    contentHtml: `<h2>Why Convert HEIC to JPG on Mac?</h2>
+    image: '/blog-images/heic-to-jpg-on-mac.svg',
+    alt: 'Mac tutorial showing how to convert HEIC photos to JPG using Preview app, Photos app, and online tools',
+    author: 'Sarah Chen',
+    takeaways: [
+      'Macs support HEIC natively but you may need JPG for sharing with non-Apple users',
+      'Preview.app and Photos.app both offer built-in HEIC to JPG conversion',
+      'Browser-based converters are best for batch processing without software installation',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>macOS supports HEIC natively, but JPG is still needed for sharing with Windows users.</li><li>Preview.app offers free one-by-one HEIC to JPG conversion with metadata preservation.</li><li>Change your iPhone camera to Most Compatible format to avoid HEIC entirely.</li></ul></div><h2>Why Convert HEIC to JPG on Mac?</h2>
 <p>While macOS supports HEIC natively, you may need JPG files for compatibility with older software, websites, or when sharing with Windows users. Fortunately, Mac offers several built-in methods to convert HEIC to JPG, along with third-party options for batch processing.</p>
 <h2>Method 1: Change iPhone Camera Format</h2>
 <p>The simplest approach is preventative: change your iPhone camera settings to capture in Most Compatible format. Go to Settings > Camera > Formats and select <strong>Most Compatible</strong>. This makes your iPhone capture JPEG instead of HEIC. While this solves the compatibility issue, you lose the storage benefits of HEIC, resulting in larger photo files.</p>
@@ -208,9 +278,18 @@ export const blogPosts: BlogPost[] = [
     description: 'Understand the difference between lossless and lossy compression. When to use each type and how it affects image quality.',
     keywords: 'lossless vs lossy compression, image compression types, lossless image, lossy compression explained',
     date: '2026-06-01',
+    lastUpdated: '2026-07-05',
     readingTime: '8 min read',
     category: 'Educational',
-    contentHtml: `<h2>Understanding Image Compression</h2>
+    image: '/blog-images/lossless-vs-lossy-image-compression.svg',
+    alt: 'Lossless vs lossy image compression comparison showing quality preservation and file size differences between the two methods',
+    author: 'Alex Martinez',
+    takeaways: [
+      'Lossless compression preserves every pixel — essential for editing and archiving',
+      'Lossy compression achieves 10-50x smaller files by discarding imperceptible detail',
+      'Use lossless for archival and editing; use lossy for web and sharing',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>Lossless compression keeps every pixel intact — ideal for editing and archiving.</li><li>Lossy compression can reduce files by 10-50x with minimal visible quality loss.</li><li>Choose lossless for images you will edit; pick lossy for images you will share.</li></ul></div><h2>Understanding Image Compression</h2>
 <p>Image compression is the process of reducing the file size of an image without degrading its quality beyond an acceptable level. The two primary types of compression are <strong>lossless</strong> and <strong>lossy</strong>, each serving different purposes and use cases in photography, web design, and document management.</p>
 <h2>Lossless Compression Explained</h2>
 <p>Lossless compression reduces file size by identifying and eliminating statistical redundancy in the image data. No information is discarded, so the decompressed image is pixel-for-pixel identical to the original. Formats that use lossless compression include PNG, GIF, BMP, TIFF (with LZW compression), and WebP lossless. Lossless compression typically achieves 2:1 to 5:1 compression ratios, making files significantly smaller than uncompressed formats but larger than lossy alternatives.</p>
@@ -235,9 +314,18 @@ export const blogPosts: BlogPost[] = [
     description: 'Optimize your images for Instagram, Facebook, Twitter, LinkedIn, and TikTok. Recommended formats, sizes, and compression tips.',
     keywords: 'best image format social media, image size Instagram, Facebook image format, social media image optimization',
     date: '2026-05-28',
+    lastUpdated: '2026-07-05',
     readingTime: '10 min read',
     category: 'Guide',
-    contentHtml: `<h2>Social Media Image Optimization in 2026</h2>
+    image: '/blog-images/best-image-format-for-social-media.svg',
+    alt: 'Social media image format guide showing recommended formats and sizes for Instagram, Facebook, Twitter, LinkedIn, and TikTok',
+    author: 'Sarah Chen',
+    takeaways: [
+      'JPEG is the safest choice for all social media platforms — it balances quality and compatibility',
+      'Each platform compresses images differently — starting with high quality JPEG at correct dimensions is critical',
+      'Use PNG only when your image contains text or graphics that need sharp edges',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>JPEG works best across all social media platforms for photos.</li><li>Each platform uses its own compression — start with the highest quality source.</li><li>Use correct dimensions to avoid platform recompression artifacts.</li></ul></div><h2>Social Media Image Optimization in 2026</h2>
 <p>Each social media platform handles images differently, with unique compression algorithms, format preferences, and recommended dimensions. Using the right format and size for each platform ensures your images look their best and upload quickly.</p>
 <h2>Instagram Image Formats</h2>
 <p>Instagram uses JPEG as its primary format for feed posts and Stories. The platform compresses all uploaded images, so starting with a high-quality JPEG at the correct resolution produces the best results. Instagram supports PNG for images with text or graphics, but the platform converts them to JPEG anyway, potentially introducing artifacts. For Instagram, use JPEG at 1080x1080 pixels for square posts, 1080x1350 for portrait, and 1080x566 for landscape.</p>
@@ -265,9 +353,18 @@ export const blogPosts: BlogPost[] = [
     description: 'Can Android open HEIC photos? Learn how to view and convert iPhone HEIC images on Samsung, Google Pixel, and other Android devices.',
     keywords: 'HEIC Android, open HEIC on Android, HEIC to JPG Android, view HEIC Samsung, HEIC converter Android',
     date: '2026-05-25',
+    lastUpdated: '2026-07-05',
     readingTime: '6 min read',
     category: 'Tutorial',
-    contentHtml: `<h2>HEIC Support on Android</h2>
+    image: '/blog-images/how-to-open-heic-files-on-android.svg',
+    alt: 'Android smartphone tutorial showing how to open and convert HEIC iPhone photos on Samsung Galaxy and Google Pixel devices',
+    author: 'Sarah Chen',
+    takeaways: [
+      'Modern Samsung and Pixel phones support HEIC natively — check your Gallery app first',
+      'Google Photos is the most reliable way to view HEIC files across all Android devices',
+      'Browser-based converters work on any Android phone without installing apps',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>Check your Gallery app first — many modern Android phones support HEIC natively.</li><li>Google Photos seamlessly handles HEIC viewing and downloading on any Android device.</li><li>Browser-based converters need no app installation and work on every Android phone.</li></ul></div><h2>HEIC Support on Android</h2>
 <p>HEIC compatibility on Android varies significantly between manufacturers and Android versions. While modern Android devices have added support, many older models still cannot open HEIC files without additional software. This guide covers every method to view and convert HEIC photos on Android devices.</p>
 <h2>Method 1: Check Your Phone's Native Support</h2>
 <p>Samsung Galaxy devices running One UI 3.0 or later support HEIC natively in the Gallery app. Google Pixel phones have supported HEIC since Android 10. OnePlus, Xiaomi, and other manufacturers have added HEIC support in recent Android versions. To check, simply transfer a HEIC file to your phone and try opening it in the default Gallery app. If it opens, your phone supports HEIC natively.</p>
@@ -293,9 +390,18 @@ export const blogPosts: BlogPost[] = [
     description: 'Which image format is best for document scanning? Compare TIFF, PNG, and JPEG for scans, OCR, and archival purposes.',
     keywords: 'best format for scanning, TIFF vs PNG vs JPEG, document scanning format, scan to TIFF, scan to PDF',
     date: '2026-05-22',
+    lastUpdated: '2026-07-05',
     readingTime: '8 min read',
     category: 'Guide',
-    contentHtml: `<h2>Choosing the Right Format for Document Scanning</h2>
+    image: '/blog-images/tiff-vs-png-vs-jpeg-scanning.svg',
+    alt: 'TIFF vs PNG vs JPEG scanning comparison showing file sizes at 300 DPI and format recommendations for different scanning use cases',
+    author: 'Alex Martinez',
+    takeaways: [
+      'TIFF is the gold standard for archival scanning — lossless and professional-grade',
+      'PNG offers the best OCR accuracy with lossless quality at smaller sizes than TIFF',
+      'JPEG is best for quick sharing — a 10 MB TIFF can become a 300 KB JPEG',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>TIFF is the archival gold standard — lossless and multi-page capable.</li><li>PNG delivers the best OCR accuracy with excellent text sharpness.</li><li>JPEG reduces scan files by 30-50x — ideal for email and quick sharing.</li></ul></div><h2>Choosing the Right Format for Document Scanning</h2>
 <p>When digitizing documents, the choice of image format affects file size, OCR accuracy, print quality, and long-term archival value. TIFF, PNG, and JPEG each offer different advantages depending on whether you are scanning for archival, text recognition, or everyday sharing.</p>
 <h2>TIFF: The Professional Standard</h2>
 <p>TIFF (Tagged Image File Format) is the gold standard for professional document scanning and archival. It supports uncompressed or lossless compression, preserving every pixel of the original scan. TIFF can store multiple pages in a single file, making it convenient for multi-page documents. Libraries, legal firms, and medical offices use TIFF for long-term document storage because it ensures no data is lost over time.</p>
@@ -328,9 +434,18 @@ export const blogPosts: BlogPost[] = [
     description: 'SVG vector vs PNG raster: which format works best for icons, logos, illustrations, and images on the modern web.',
     keywords: 'SVG vs PNG, SVG PNG difference, web design formats, vector vs raster, when to use SVG',
     date: '2026-05-18',
+    lastUpdated: '2026-07-05',
     readingTime: '7 min read',
     category: 'Format Comparison',
-    contentHtml: `<h2>Vector vs Raster: The Fundamental Difference</h2>
+    image: '/blog-images/svg-vs-png-web-design.svg',
+    alt: 'SVG vs PNG comparison for web design showing vector versus raster image quality differences at different zoom levels',
+    author: 'Alex Martinez',
+    takeaways: [
+      'SVG scales infinitely without quality loss — perfect for logos and icons at any screen size',
+      'PNG is essential for photographs and complex images that SVG cannot efficiently represent',
+      'Use SVG for simple graphics under 1 KB; use PNG for anything with gradients or millions of colors',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>SVG vectors scale to any size without quality loss — ideal for responsive logos and icons.</li><li>PNG rasters are essential for photos and complex images SVG cannot handle.</li><li>SVG files for simple icons are often under 1 KB, far smaller than PNG equivalents.</li></ul></div><h2>Vector vs Raster: The Fundamental Difference</h2>
 <p>SVG (Scalable Vector Graphics) and PNG (Portable Network Graphics) represent two fundamentally different approaches to image rendering. SVG uses mathematical formulas to describe shapes and paths, making it resolution-independent. PNG stores individual pixel values, making it resolution-dependent. Understanding this difference is key to choosing the right format for your web design projects.</p>
 <h2>SVG: Infinite Scaling, Tiny Files</h2>
 <p>SVG is an XML-based vector format that describes images using geometric primitives like points, lines, curves, and shapes. Because it is resolution-independent, SVG graphics look crisp at any size, from tiny favicons to massive billboard displays. SVG files are typically much smaller than PNG equivalents for simple graphics like logos and icons. Additionally, SVG can be styled and animated with CSS and manipulated with JavaScript, making it incredibly versatile for interactive web designs.</p>
@@ -359,7 +474,20 @@ export const blogPosts: BlogPost[] = [
     date: '2026-05-15',
     readingTime: '8 min read',
     category: 'Format Comparison',
-    contentHtml: `<h2>The Evolution of Animated Image Formats</h2>
+    image: '/blog-images/gif-vs-png-vs-webp-animation.svg',
+    alt: 'GIF vs animated PNG vs animated WebP comparison showing quality differences, file sizes, and browser support for each format',
+    author: 'Sarah Chen',
+    lastUpdated: '2026-07-05',
+    takeaways: [
+      'GIF is limited to 256 colors and produces the largest files — only use it for maximum compatibility',
+      'APNG offers full 24-bit color with alpha transparency at 20-30% smaller than GIF',
+      'Animated WebP is the best modern choice — 40-60% smaller than GIF with superior quality',
+    ],
+    sources: [
+      { name: 'Google WebP Documentation', url: 'https://developers.google.com/speed/webp' },
+      { name: 'Mozilla Developer Network — APNG', url: 'https://developer.mozilla.org/en-US/docs/Mozilla/Animated_PNG' },
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>GIF is stuck at 256 colors — use it only when universal support is mandatory.</li><li>Animated WebP beats GIF by 40-60% in file size with millions of colors.</li><li>APNG fills the gap for Apple users who need high-quality animations.</li></ul></div>
 <p>For decades, GIF was the only option for animated images on the web. Today, multiple formats compete to deliver better quality, smaller file sizes, and more features. This guide compares GIF, animated PNG (APNG), and animated WebP to help you choose the right format for your animated graphics.</p>
 <h2>GIF: The Legacy Standard</h2>
 <p>GIF (Graphics Interchange Format) was introduced by CompuServe in 1987 and remains the most universally supported animated image format. Its 256-color palette limit makes it unsuitable for photographs but perfectly adequate for simple animations, memes, and low-color graphics. GIF uses LZW compression and supports transparency, though only binary transparency (fully on or off, no partial opacity).</p>

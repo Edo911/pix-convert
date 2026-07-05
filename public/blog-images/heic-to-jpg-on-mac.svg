@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0c17"/><stop offset="50%" stop-color="#131628"/><stop offset="100%" stop-color="#0d0f1f"/></linearGradient>
+    <linearGradient id="heicGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9b59b6"/><stop offset="100%" stop-color="#4d96ff"/></linearGradient>
+    <linearGradient id="jpgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#ffd93d"/></linearGradient>
+    <linearGradient id="appleBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4d96ff"/><stop offset="100%" stop-color="#6bcb77"/></linearGradient>
+    <linearGradient id="convertGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#9b59b6"/><stop offset="50%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#ffd93d"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="250" cy="180" r="220" fill="rgba(155,89,182,0.04)"/>
+  <circle cx="950" cy="450" r="220" fill="rgba(255,107,107,0.04)"/>
+  <circle cx="600" cy="315" r="300" fill="rgba(77,150,255,0.03)"/>
+
+  <g transform="translate(150,120)">
+    <rect x="0" y="0" width="280" height="340" rx="32" fill="#1a1d2e" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+    <rect x="110" y="12" width="60" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+    <rect x="20" y="40" width="240" height="160" rx="8" fill="#2a2d3e"/>
+    <circle cx="140" cy="120" r="40" fill="url(#heicGrad)" opacity="0.5"/>
+    <text x="140" y="128" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">HEIC</text>
+    <rect x="20" y="215" width="240" height="14" rx="7" fill="rgba(255,255,255,0.06)"/>
+    <rect x="20" y="240" width="180" height="14" rx="7" fill="rgba(255,255,255,0.04)"/>
+    <rect x="20" y="265" width="200" height="14" rx="7" fill="rgba(255,255,255,0.04)"/>
+    <rect x="20" y="290" width="140" height="14" rx="7" fill="rgba(255,255,255,0.03)"/>
+    <circle cx="140" cy="325" r="6" fill="#9b59b6"/>
+    <text x="140" y="330" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle">HEIC</text>
+  </g>
+
+  <g transform="translate(530,220)">
+    <rect x="-20" y="0" width="40" height="40" rx="20" fill="rgba(255,255,255,0.06)"/>
+    <text x="0" y="26" font-family="Arial,sans-serif" font-size="20" fill="rgba(255,255,255,0.4)" text-anchor="middle">→</text>
+  </g>
+  <text x="600" y="300" font-family="Arial,sans-serif" font-size="48" font-weight="900" fill="url(#convertGrad)" text-anchor="middle" letter-spacing="4">HEIC → JPG</text>
+
+  <g transform="translate(770,120)">
+    <rect x="0" y="0" width="280" height="340" rx="32" fill="#1a1d2e" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+    <rect x="110" y="12" width="60" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+    <rect x="20" y="40" width="240" height="160" rx="8" fill="#2a2d3e"/>
+    <circle cx="140" cy="120" r="40" fill="url(#jpgGrad)" opacity="0.5"/>
+    <text x="140" y="128" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">JPG</text>
+    <rect x="20" y="215" width="200" height="14" rx="7" fill="rgba(255,255,255,0.06)"/>
+    <rect x="20" y="240" width="220" height="14" rx="7" fill="rgba(255,255,255,0.04)"/>
+    <rect x="20" y="265" width="160" height="14" rx="7" fill="rgba(255,255,255,0.04)"/>
+    <rect x="20" y="290" width="180" height="14" rx="7" fill="rgba(255,255,255,0.03)"/>
+    <circle cx="140" cy="325" r="6" fill="#ff6b6b"/>
+    <text x="140" y="330" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle">JPG</text>
+  </g>
+
+  <rect x="420" y="490" width="120" height="36" rx="18" fill="rgba(77,150,255,0.12)" stroke="rgba(77,150,255,0.2)" stroke-width="1"/>
+  <text x="480" y="514" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#4d96ff" text-anchor="middle">⌘ Preview</text>
+  <rect x="555" y="490" width="110" height="36" rx="18" fill="rgba(107,203,119,0.12)" stroke="rgba(107,203,119,0.2)" stroke-width="1"/>
+  <text x="610" y="514" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#6bcb77" text-anchor="middle">📸 Photos</text>
+  <rect x="680" y="490" width="120" height="36" rx="18" fill="rgba(255,217,61,0.12)" stroke="rgba(255,217,61,0.2)" stroke-width="1"/>
+  <text x="740" y="514" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#ffd93d" text-anchor="middle">🖥 Shortcuts</text>
+
+  <text x="600" y="560" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#e8eaf0" text-anchor="middle">How to Convert HEIC to JPG on Mac</text>
+  <text x="600" y="600" font-family="Arial,sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Mac • iPhone • Preview app</text>
+</svg>

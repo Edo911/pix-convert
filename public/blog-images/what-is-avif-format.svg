@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0c17"/><stop offset="50%" stop-color="#131628"/><stop offset="100%" stop-color="#0d0f1f"/></linearGradient>
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="25%" stop-color="#ffd93d"/><stop offset="50%" stop-color="#6bcb77"/><stop offset="75%" stop-color="#4d96ff"/><stop offset="100%" stop-color="#9b59b6"/></linearGradient>
+    <linearGradient id="hexGrad1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#ffd93d"/></linearGradient>
+    <linearGradient id="hexGrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6bcb77"/><stop offset="100%" stop-color="#4d96ff"/></linearGradient>
+    <linearGradient id="hexGrad3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4d96ff"/><stop offset="100%" stop-color="#9b59b6"/></linearGradient>
+    <linearGradient id="hexGrad4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#9b59b6"/><stop offset="100%" stop-color="#ff6b6b"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <circle cx="300" cy="150" r="200" fill="rgba(255,107,107,0.05)"/>
+  <circle cx="950" cy="480" r="220" fill="rgba(77,150,255,0.05)"/>
+  <circle cx="600" cy="315" r="300" fill="rgba(107,203,119,0.03)"/>
+
+  <g transform="translate(370, 100) rotate(30)">
+    <polygon points="35,0 70,20 70,60 35,80 0,60 0,20" fill="url(#hexGrad1)" opacity="0.12"/>
+  </g>
+  <g transform="translate(850, 420) rotate(-15)">
+    <polygon points="25,0 50,14 50,44 25,58 0,44 0,14" fill="url(#hexGrad2)" opacity="0.12"/>
+  </g>
+  <g transform="translate(180, 450) rotate(45)">
+    <polygon points="30,0 60,17 60,52 30,69 0,52 0,17" fill="url(#hexGrad3)" opacity="0.1"/>
+  </g>
+  <g transform="translate(950, 120) rotate(-25)">
+    <polygon points="20,0 40,12 40,35 20,46 0,35 0,12" fill="url(#hexGrad4)" opacity="0.12"/>
+  </g>
+
+  <g transform="translate(420,180)">
+    <polygon points="80,0 160,46 160,139 80,185 0,139 0,46" fill="url(#hexGrad1)" opacity="0.15"/>
+  </g>
+  <g transform="translate(620,180)">
+    <polygon points="80,0 160,46 160,139 80,185 0,139 0,46" fill="url(#hexGrad2)" opacity="0.15"/>
+  </g>
+  <g transform="translate(520,280)">
+    <polygon points="80,0 160,46 160,139 80,185 0,139 0,46" fill="url(#hexGrad3)" opacity="0.15"/>
+  </g>
+
+  <text x="600" y="220" font-family="Arial,sans-serif" font-size="120" font-weight="900" fill="url(#rainbow)" text-anchor="middle" letter-spacing="15">AVIF</text>
+
+  <g transform="translate(380, 260)">
+    <polygon points="25,0 50,14 50,44 25,58 0,44 0,14" fill="url(#hexGrad4)" opacity="0.2"/>
+    <polygon points="25,0 50,14 50,44 25,58 0,44 0,14" fill="none" stroke="rgba(155,89,182,0.3)" stroke-width="1"/>
+  </g>
+  <g transform="translate(800, 260)">
+    <polygon points="25,0 50,14 50,44 25,58 0,44 0,14" fill="url(#hexGrad1)" opacity="0.2"/>
+    <polygon points="25,0 50,14 50,44 25,58 0,44 0,14" fill="none" stroke="rgba(255,107,107,0.3)" stroke-width="1"/>
+  </g>
+
+  <g opacity="0.3">
+    <polygon points="600,310 620,322 620,346 600,358 580,346 580,322" fill="none" stroke="#6bcb77" stroke-width="1.5"/>
+    <polygon points="560,295 580,307 580,331 560,343 540,331 540,307" fill="none" stroke="#4d96ff" stroke-width="1.5"/>
+    <polygon points="640,295 660,307 660,331 640,343 620,331 620,307" fill="none" stroke="#ff6b6b" stroke-width="1.5"/>
+  </g>
+
+  <rect x="300" y="350" width="600" height="60" rx="30" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <text x="400" y="388" font-family="Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.5)" text-anchor="middle">AV1 compression</text>
+  <circle cx="475" cy="380" r="3" fill="rgba(255,255,255,0.2)"/>
+  <text x="525" y="388" font-family="Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.5)" text-anchor="middle">HDR support</text>
+  <circle cx="610" cy="380" r="3" fill="rgba(255,255,255,0.2)"/>
+  <text x="660" y="388" font-family="Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.5)" text-anchor="middle">Transparency</text>
+  <circle cx="748" cy="380" r="3" fill="rgba(255,255,255,0.2)"/>
+  <text x="800" y="388" font-family="Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.5)" text-anchor="middle">70% smaller than JPEG</text>
+
+  <rect x="420" y="440" width="80" height="40" rx="20" fill="rgba(255,107,107,0.15)"/>
+  <text x="460" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="#ff6b6b" text-anchor="middle">JPEG</text>
+
+  <text x="540" y="466" font-family="Arial,sans-serif" font-size="24" fill="rgba(255,255,255,0.3)" text-anchor="middle">→</text>
+
+  <rect x="580" y="440" width="80" height="40" rx="20" fill="rgba(107,203,119,0.15)"/>
+  <text x="620" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="#6bcb77" text-anchor="middle">WebP</text>
+
+  <text x="700" y="466" font-family="Arial,sans-serif" font-size="24" fill="rgba(255,255,255,0.3)" text-anchor="middle">→</text>
+
+  <rect x="740" y="440" width="80" height="40" rx="20" fill="rgba(155,89,182,0.15)"/>
+  <text x="780" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="#9b59b6" text-anchor="middle">AVIF</text>
+
+  <text x="600" y="545" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#e8eaf0" text-anchor="middle">What is the AVIF Format?</text>
+  <text x="600" y="585" font-family="Arial,sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Next-gen image format • AV1 compression</text>
+</svg>

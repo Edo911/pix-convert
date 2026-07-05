@@ -1263,3 +1263,59 @@ details[open] .faq-item__question::after {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.blog-article__image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(115,126,241,0.1);
+}
+
+.blog-article__author {
+  font-size: 0.88rem;
+  color: #818cf8;
+  margin: 0.5rem 0 1rem;
+  font-style: italic;
+}
+
+.takeaways {
+  background: rgba(99,102,241,0.08);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0 2rem;
+}
+
+.takeaways strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #818cf8;
+  margin-bottom: 0.5rem;
+}
+
+.takeaways ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.takeaways li {
+  font-size: 0.9rem;
+  color: #c4c9d8;
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+.blog-sources__list {
+  padding-left: 1.25rem;
+}
+
+.blog-sources__link {
+  color: #818cf8;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.blog-sources__link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0c17"/><stop offset="50%" stop-color="#131628"/><stop offset="100%" stop-color="#0d0f1f"/></linearGradient>
+    <linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#ffd93d"/></linearGradient>
+    <linearGradient id="r2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4d96ff"/><stop offset="100%" stop-color="#9b59b6"/></linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="200" cy="150" r="200" fill="rgba(255,107,107,0.06)"/>
+  <circle cx="1000" cy="480" r="220" fill="rgba(77,150,255,0.06)"/>
+  <rect x="180" y="180" width="320" height="180" rx="20" fill="rgba(255,255,255,0.04)" stroke="url(#r1)" stroke-width="2"/>
+  <text x="340" y="250" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="url(#r1)" text-anchor="middle">HEIC</text>
+  <text x="340" y="290" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">50% smaller files</text>
+  <text x="340" y="315" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Apple iOS 11+</text>
+  <rect x="700" y="180" width="320" height="180" rx="20" fill="rgba(255,255,255,0.04)" stroke="url(#r2)" stroke-width="2"/>
+  <text x="860" y="250" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="url(#r2)" text-anchor="middle">JPEG</text>
+  <text x="860" y="290" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Universal support</text>
+  <text x="860" y="315" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">25+ years standard</text>
+  <path d="M530 270 L670 270" stroke="#6bcb77" stroke-width="3" stroke-dasharray="8,4"/>
+  <polygon points="660,260 680,270 660,280" fill="#6bcb77"/>
+  <text x="600" y="255" font-family="Arial,sans-serif" font-size="14" fill="#6bcb77" text-anchor="middle">vs</text>
+  <text x="600" y="470" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eaf0" text-anchor="middle">HEIC vs JPG: Complete Guide</text>
+  <text x="600" y="510" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">File size • Quality • Compatibility • Use cases</text>
+</svg>

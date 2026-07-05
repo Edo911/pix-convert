@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0c17"/><stop offset="50%" stop-color="#131628"/><stop offset="100%" stop-color="#0d0f1f"/></linearGradient>
+    <linearGradient id="gifGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#ffd93d"/></linearGradient>
+    <linearGradient id="pngAnimGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6bcb77"/><stop offset="100%" stop-color="#4d96ff"/></linearGradient>
+    <linearGradient id="webpGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4d96ff"/><stop offset="100%" stop-color="#9b59b6"/></linearGradient>
+    <linearGradient id="rainbowText" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="25%" stop-color="#ffd93d"/><stop offset="50%" stop-color="#6bcb77"/><stop offset="75%" stop-color="#4d96ff"/><stop offset="100%" stop-color="#9b59b6"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="200" cy="200" r="200" fill="rgba(255,107,107,0.04)"/>
+  <circle cx="600" cy="200" r="200" fill="rgba(107,203,119,0.04)"/>
+  <circle cx="1000" cy="200" r="200" fill="rgba(77,150,255,0.04)"/>
+  <circle cx="600" cy="500" r="250" fill="rgba(155,89,182,0.03)"/>
+
+  <g transform="translate(60,90)">
+    <rect x="0" y="0" width="300" height="340" rx="16" fill="#1a1d2e" stroke="rgba(255,107,107,0.1)" stroke-width="1.5"/>
+    <text x="150" y="35" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#ff6b6b" text-anchor="middle">Frame 1</text>
+    <line x1="20" y1="50" x2="280" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+    <circle cx="150" cy="130" r="50" fill="rgba(255,107,107,0.1)"/>
+    <circle cx="150" cy="130" r="30" fill="rgba(255,107,107,0.15)"/>
+    <circle cx="150" cy="130" r="12" fill="rgba(255,107,107,0.25)"/>
+
+    <rect x="100" y="200" width="100" height="20" rx="10" fill="rgba(255,215,0,0.1)"/>
+    <rect x="120" y="220" width="60" height="20" rx="10" fill="rgba(255,215,0,0.06)"/>
+
+    <rect x="50" y="270" width="200" height="30" rx="6" fill="rgba(255,107,107,0.08)"/>
+    <text x="150" y="291" font-family="Arial,sans-serif" font-size="11" fill="#ff6b6b" text-anchor="middle" font-weight="600">256 COLORS</text>
+  </g>
+
+  <g transform="translate(450,90)">
+    <rect x="0" y="0" width="300" height="340" rx="16" fill="#1a1d2e" stroke="rgba(107,203,119,0.1)" stroke-width="1.5"/>
+    <text x="150" y="35" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#6bcb77" text-anchor="middle">Frame 2</text>
+    <line x1="20" y1="50" x2="280" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+    <rect x="100" y="95" width="100" height="80" rx="12" fill="rgba(107,203,119,0.1)" stroke="rgba(107,203,119,0.2)" stroke-width="1.5"/>
+    <rect x="120" y="115" width="60" height="40" rx="6" fill="rgba(107,203,119,0.15)"/>
+
+    <circle cx="150" cy="220" r="35" fill="rgba(77,150,255,0.1)"/>
+    <circle cx="150" cy="220" r="20" fill="rgba(77,150,255,0.15)"/>
+    <circle cx="150" cy="220" r="8" fill="rgba(77,150,255,0.2)"/>
+
+    <rect x="50" y="270" width="200" height="30" rx="6" fill="rgba(107,203,119,0.08)"/>
+    <text x="150" y="291" font-family="Arial,sans-serif" font-size="11" fill="#6bcb77" text-anchor="middle" font-weight="600">TRANSPARENCY</text>
+  </g>
+
+  <g transform="translate(840,90)">
+    <rect x="0" y="0" width="300" height="340" rx="16" fill="#1a1d2e" stroke="rgba(77,150,255,0.1)" stroke-width="1.5"/>
+    <text x="150" y="35" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#4d96ff" text-anchor="middle">Frame 3</text>
+    <line x1="20" y1="50" x2="280" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+    <polygon points="150,85 185,108 173,150 127,150 115,108" fill="rgba(77,150,255,0.1)" stroke="rgba(77,150,255,0.2)" stroke-width="1.5"/>
+    <polygon points="150,105 170,120 162,145 138,145 130,120" fill="rgba(77,150,255,0.15)"/>
+
+    <circle cx="150" cy="210" r="40" fill="rgba(155,89,182,0.1)"/>
+    <circle cx="150" cy="210" r="25" fill="rgba(155,89,182,0.15)"/>
+    <circle cx="150" cy="210" r="10" fill="rgba(155,89,182,0.2)"/>
+
+    <rect x="50" y="270" width="200" height="30" rx="6" fill="rgba(77,150,255,0.08)"/>
+    <text x="150" y="291" font-family="Arial,sans-serif" font-size="11" fill="#4d96ff" text-anchor="middle" font-weight="600">MODERN</text>
+  </g>
+
+  <g transform="translate(200,470)">
+    <rect x="0" y="0" width="800" height="50" rx="25" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    <text x="133" y="33" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#ff6b6b" text-anchor="middle">GIF</text>
+    <text x="133" y="33" font-family="Arial,sans-serif" font-size="16" fill="rgba(255,255,255,0.3)" text-anchor="middle" dx="30">Palette limited</text>
+    <line x1="266" y1="10" x2="266" y2="40" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    <text x="400" y="33" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#6bcb77" text-anchor="middle">PNG</text>
+    <text x="400" y="33" font-family="Arial,sans-serif" font-size="16" fill="rgba(255,255,255,0.3)" text-anchor="middle" dx="40">Transparency</text>
+    <line x1="533" y1="10" x2="533" y2="40" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    <text x="666" y="33" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#4d96ff" text-anchor="middle">WebP</text>
+    <text x="666" y="33" font-family="Arial,sans-serif" font-size="16" fill="rgba(255,255,255,0.3)" text-anchor="middle" dx="50">Best quality</text>
+  </g>
+
+  <text x="600" y="558" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#e8eaf0" text-anchor="middle">GIF vs PNG vs WebP for Animation</text>
+  <text x="600" y="598" font-family="Arial,sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Animation • Quality • File size • Browser support</text>
+</svg>

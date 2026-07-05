@@ -138,9 +138,10 @@ export function BlogArticle({ slug }: { slug: string }) {
           headline: post.title,
           description: post.description,
           datePublished: post.date,
+          dateModified: post.lastUpdated || post.date,
           author: {
-            '@type': 'Organization',
-            name: 'PixConvert',
+            '@type': 'Person',
+            name: post.author || 'PixConvert',
           },
           publisher: {
             '@type': 'Organization',
@@ -150,6 +151,7 @@ export function BlogArticle({ slug }: { slug: string }) {
               url: `${BASE}/favicon.svg`,
             },
           },
+          image: post.image ? `${S}${post.image}` : undefined,
           mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         })}
       </script>
@@ -160,9 +162,21 @@ export function BlogArticle({ slug }: { slug: string }) {
             <span className="blog-article__category">{post.category}</span>
             <span>{post.date}</span>
             <span>{post.readingTime}</span>
+            {post.lastUpdated && <span>Updated {post.lastUpdated}</span>}
           </div>
+          {post.image && (
+            <img
+              src={post.image}
+              alt={post.alt}
+              className="blog-article__image"
+              loading="lazy"
+              width="1200"
+              height="630"
+            />
+          )}
           <h1 className="blog-article__title">{post.title}</h1>
           <p className="blog-article__desc">{post.description}</p>
+          {post.author && <p className="blog-article__author">By {post.author} — PixConvert Editorial Team</p>}
           <ShareButtons url={url} title={post.title} />
         </header>
 
@@ -186,6 +200,19 @@ export function BlogArticle({ slug }: { slug: string }) {
       </article>
 
       <ShareButtons url={url} title={post.title} />
+
+      {post.sources && post.sources.length > 0 && (
+        <section className="content-section blog-sources">
+          <h2>Sources</h2>
+          <ol className="blog-sources__list">
+            {post.sources.map((s, i) => (
+              <li key={i}>
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="blog-sources__link">{s.name}</a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       {relatedConversions.length > 0 && (
         <section className="content-section related-section">
