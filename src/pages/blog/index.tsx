@@ -151,7 +151,7 @@ export function BlogArticle({ slug }: { slug: string }) {
               url: `${BASE}/favicon.svg`,
             },
           },
-          image: post.image ? `${S}${post.image}` : undefined,
+          image: post.image ? `${BASE}${post.image}` : undefined,
           mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         })}
       </script>
