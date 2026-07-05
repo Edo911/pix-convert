@@ -10,15 +10,18 @@ interface ConversionPageProps {
   route: ConversionRoute
 }
 
-const comparisonData: Record<string, { label: string; jpg: string; png: string; webp: string; heic: string; avif: string; tiff: string; gif: string; bmp: string }> = {
-  'HEIC': { label: 'HEIC', jpg: '2-3x smaller', png: '3-5x smaller', webp: 'Similar size', heic: '—', avif: '1.5x larger', tiff: '10-20x smaller', gif: '5-10x smaller', bmp: '20-40x smaller' },
-  'JPEG': { label: 'JPEG', jpg: '—', png: '3-10x smaller', webp: '25-35% larger', heic: '2-3x larger', avif: '50% larger', tiff: '5-15x smaller', gif: '2-5x smaller', bmp: '10-30x smaller' },
-  'PNG': { label: 'PNG', jpg: '3-10x larger', png: '—', webp: '3-8x larger', heic: '3-5x larger', avif: '3-6x larger', tiff: 'Similar or smaller', gif: '2-4x larger', bmp: '3-8x smaller' },
-  'WebP': { label: 'WebP', jpg: '25-35% smaller', png: '3-8x smaller', webp: '—', heic: 'Similar', avif: '20-30% larger', tiff: '8-15x smaller', gif: '1.5-3x smaller', bmp: '15-30x smaller' },
-  'AVIF': { label: 'AVIF', jpg: '50% smaller', png: '3-6x smaller', webp: '20-30% smaller', heic: '1.5x smaller', avif: '—', tiff: '10-20x smaller', gif: '3-5x smaller', bmp: '20-40x smaller' },
-  'TIFF': { label: 'TIFF', jpg: '5-15x larger', png: 'Similar or larger', webp: '8-15x larger', heic: '10-20x larger', avif: '10-20x larger', tiff: '—', gif: '5-10x larger', bmp: '2-4x smaller' },
-  'GIF': { label: 'GIF', jpg: '2-5x larger', png: '2-4x smaller', webp: '1.5-3x larger', heic: '5-10x larger', avif: '3-5x larger', tiff: '5-10x larger', gif: '—', bmp: '5-15x smaller' },
-  'BMP': { label: 'BMP', jpg: '10-30x larger', png: '3-8x larger', webp: '15-30x larger', heic: '20-40x larger', avif: '20-40x larger', tiff: '2-4x larger', gif: '5-15x larger', bmp: '—' },
+const comparisonData: Record<string, Record<string, string>> = {
+  'HEIC': { label: 'HEIC', JPEG: '2-3x smaller', PNG: '3-5x smaller', WebP: 'Similar size', HEIC: '—', AVIF: '1.5x larger', TIFF: '10-20x smaller', GIF: '5-10x smaller', BMP: '20-40x smaller', SVG: 'N/A', ICO: 'N/A', Image: 'Varies' },
+  'JPEG': { label: 'JPEG', JPEG: '—', PNG: '3-10x smaller', WebP: '25-35% larger', HEIC: '2-3x larger', AVIF: '50% larger', TIFF: '5-15x smaller', GIF: '2-5x smaller', BMP: '10-30x smaller', SVG: 'N/A', ICO: 'N/A', Image: 'Varies' },
+  'PNG': { label: 'PNG', JPEG: '3-10x larger', PNG: '—', WebP: '3-8x larger', HEIC: '3-5x larger', AVIF: '3-6x larger', TIFF: 'Similar or smaller', GIF: '2-4x larger', BMP: '3-8x smaller', SVG: 'N/A', ICO: 'Depends', Image: 'Varies' },
+  'WebP': { label: 'WebP', JPEG: '25-35% smaller', PNG: '3-8x smaller', WebP: '—', HEIC: 'Similar', AVIF: '20-30% larger', TIFF: '8-15x smaller', GIF: '1.5-3x smaller', BMP: '15-30x smaller', SVG: 'N/A', ICO: 'N/A', Image: 'Varies' },
+  'AVIF': { label: 'AVIF', JPEG: '50% smaller', PNG: '3-6x smaller', WebP: '20-30% smaller', HEIC: '1.5x smaller', AVIF: '—', TIFF: '10-20x smaller', GIF: '3-5x smaller', BMP: '20-40x smaller', SVG: 'N/A', ICO: 'N/A', Image: 'Varies' },
+  'TIFF': { label: 'TIFF', JPEG: '5-15x larger', PNG: 'Similar or larger', WebP: '8-15x larger', HEIC: '10-20x larger', AVIF: '10-20x larger', TIFF: '—', GIF: '5-10x larger', BMP: '2-4x smaller', SVG: 'N/A', ICO: 'N/A', Image: 'Varies' },
+  'GIF': { label: 'GIF', JPEG: '2-5x larger', PNG: '2-4x smaller', WebP: '1.5-3x larger', HEIC: '5-10x larger', AVIF: '3-5x larger', TIFF: '5-10x larger', GIF: '—', BMP: '5-15x smaller', SVG: 'N/A', ICO: 'N/A', Image: 'Varies' },
+  'BMP': { label: 'BMP', JPEG: '10-30x larger', PNG: '3-8x larger', WebP: '15-30x larger', HEIC: '20-40x larger', AVIF: '20-40x larger', TIFF: '2-4x larger', GIF: '5-15x larger', BMP: '—', SVG: 'N/A', ICO: 'N/A', Image: 'Varies' },
+  'SVG': { label: 'SVG', JPEG: 'N/A', PNG: 'Depends', WebP: 'N/A', HEIC: 'N/A', AVIF: 'N/A', TIFF: 'N/A', GIF: 'N/A', BMP: 'N/A', SVG: '—', ICO: 'N/A', Image: 'N/A' },
+  'Image': { label: 'Image', JPEG: 'Varies', PNG: 'Varies', WebP: 'Varies', HEIC: 'Varies', AVIF: 'Varies', TIFF: 'Varies', GIF: 'Varies', BMP: 'Varies', SVG: 'Varies', ICO: 'Depends', Image: '—' },
+  'ICO': { label: 'ICO', JPEG: 'N/A', PNG: 'Depends', WebP: 'N/A', HEIC: 'N/A', AVIF: 'N/A', TIFF: 'N/A', GIF: 'N/A', BMP: 'N/A', SVG: 'N/A', ICO: '—', Image: 'Depends' },
 }
 
 const qualityData: Record<string, { compression: string; transparency: string; colors: string; bestFor: string }> = {
@@ -32,6 +35,7 @@ const qualityData: Record<string, { compression: string; transparency: string; c
   'BMP': { compression: 'None', transparency: 'No', colors: '16.7M', bestFor: 'Legacy Windows apps' },
   'SVG': { compression: 'Vector (XML)', transparency: 'Yes', colors: 'Infinite (vector)', bestFor: 'Icons, logos, illustrations' },
   'ICO': { compression: 'Varies', transparency: 'Yes', colors: '16.7M', bestFor: 'Favicons, Windows icons' },
+  'Image': { compression: 'Depends on source', transparency: 'Depends', colors: 'Depends on source', bestFor: 'Any image input' },
 }
 
 export function ConversionPage({ route }: ConversionPageProps) {
@@ -136,11 +140,11 @@ export function ConversionPage({ route }: ConversionPageProps) {
                 <td>{fromQuality.bestFor}</td>
                 <td>{toQuality.bestFor}</td>
               </tr>
-              {comparisonData[route.fromFormat] && comparisonData[route.toFormat] && (
+              {comparisonData[route.fromFormat] && (
                 <tr>
                   <td>File Size Ratio</td>
                   <td>Baseline</td>
-                  <td>{comparisonData[route.fromFormat]?.[route.toFormat as keyof typeof comparisonData[string]] as string || 'Varies'}</td>
+                  <td>{comparisonData[route.fromFormat]?.[route.toFormat] || 'Varies'}</td>
                 </tr>
               )}
             </tbody>
