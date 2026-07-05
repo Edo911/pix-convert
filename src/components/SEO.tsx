@@ -21,7 +21,7 @@ interface SEOProps {
 
 export function SEO({ title, description, path = '', ogImage, keywords, faq, howTo }: SEOProps) {
   const url = `${BASE}${path}`
-  const image = ogImage || `${BASE}/og-image.png`
+  const image = ogImage || `${BASE}/og-image.svg`
 
   return (
     <Helmet>
@@ -33,6 +33,8 @@ export function SEO({ title, description, path = '', ogImage, keywords, faq, how
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

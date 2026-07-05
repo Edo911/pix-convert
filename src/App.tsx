@@ -4,6 +4,9 @@ import { Home } from './pages/Home'
 import { ConversionPage } from './pages/ConversionPage'
 import { About } from './pages/About'
 import { Privacy } from './pages/Privacy'
+import { BlogIndex, BlogArticle } from './pages/blog'
+import { NotFound } from './pages/NotFound'
+import { blogPosts } from './pages/blog/blog-posts'
 import { conversionRoutes } from './pages/conversions'
 
 export function App() {
@@ -49,8 +52,13 @@ export function App() {
               element={<ConversionPage route={route} />}
             />
           ))}
+          <Route path="/blog" element={<BlogIndex />} />
+          {blogPosts.map((post) => (
+            <Route key={post.slug} path={`/blog/${post.slug}`} element={<BlogArticle slug={post.slug} />} />
+          ))}
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
@@ -60,6 +68,7 @@ export function App() {
           {conversionRoutes.map((r) => (
             <Link key={r.path} to={r.path}>{r.fromFormat} to {r.toFormat}</Link>
           ))}
+          <Link to="/blog">Blog</Link>
           <Link to="/about">About</Link>
           <Link to="/privacy">Privacy</Link>
         </div>

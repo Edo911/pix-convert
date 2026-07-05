@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0c17"/>
+      <stop offset="50%" stop-color="#131628"/>
+      <stop offset="100%" stop-color="#0d0f1f"/>
+    </linearGradient>
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="25%" stop-color="#ffd93d"/>
+      <stop offset="50%" stop-color="#6bcb77"/>
+      <stop offset="75%" stop-color="#4d96ff"/>
+      <stop offset="100%" stop-color="#9b59b6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="200" cy="100" r="250" fill="rgba(99,102,241,0.08)"/>
+  <circle cx="1000" cy="500" r="300" fill="rgba(139,92,246,0.06)"/>
+  <text x="600" y="260" font-family="'Space Grotesk',Arial,sans-serif" font-size="72" font-weight="700" fill="url(#rainbow)" text-anchor="middle" filter="url(#glow)">PixConvert</text>
+  <text x="600" y="340" font-family="Arial,sans-serif" font-size="28" fill="#9ca3af" text-anchor="middle">Free Online Image Converter</text>
+  <text x="600" y="400" font-family="Arial,sans-serif" font-size="22" fill="#6b7280" text-anchor="middle">HEIC · JPEG · PNG · WebP · AVIF · TIFF · GIF · BMP · SVG · ICO</text>
+  <text x="600" y="470" font-family="Arial,sans-serif" font-size="18" fill="#4b5563" text-anchor="middle">100% Browser-Based — No Uploads, No Signup</text>
+</svg>

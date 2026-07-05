@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PixConvert Blog</title>
+    <link>https://pix-convert-seven.vercel.app/blog</link>
+    <description>Expert guides on image formats, compression, and conversion. HEIC vs JPG, WebP vs PNG, AVIF explained, and more.</description>
+    <language>en</language>
+    <atom:link href="https://pix-convert-seven.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HEIC vs JPG: Complete Comparison Guide 2026</title>
+      <link>https://pix-convert-seven.vercel.app/blog/heic-vs-jpg-complete-guide</link>
+      <description>Detailed comparison of HEIC and JPEG image formats. Learn about file size, quality, compatibility, and when to use each format.</description>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/heic-vs-jpg-complete-guide</guid>
+    </item>
+    <item>
+      <title>How to Convert HEIC to JPG on Windows 10 and 11</title>
+      <link>https://pix-convert-seven.vercel.app/blog/how-to-convert-heic-to-jpg-on-windows</link>
+      <description>Step-by-step guide to convert iPhone HEIC photos to JPG on Windows. Free methods including browser tools, Windows Photos app, and more.</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/how-to-convert-heic-to-jpg-on-windows</guid>
+    </item>
+    <item>
+      <title>PNG vs JPG: Which Image Format Is Best for Your Website?</title>
+      <link>https://pix-convert-seven.vercel.app/blog/png-vs-jpg-best-for-web</link>
+      <description>Learn when to use PNG vs JPEG for web images. Performance tips, quality comparison, and SEO implications of image format choice.</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/png-vs-jpg-best-for-web</guid>
+    </item>
+    <item>
+      <title>What Is AVIF? The Next-Gen Image Format Explained</title>
+      <link>https://pix-convert-seven.vercel.app/blog/what-is-avif-format</link>
+      <description>Everything you need to know about AVIF: the most advanced image format. Learn about compression, browser support, and how to use AVIF today.</description>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/what-is-avif-format</guid>
+    </item>
+    <item>
+      <title>WebP vs PNG vs JPG: Which Format Should You Use?</title>
+      <link>https://pix-convert-seven.vercel.app/blog/webp-vs-png-vs-jpg</link>
+      <description>Head-to-head comparison of WebP, PNG, and JPEG. File sizes, quality, browser support, and recommendations for every use case.</description>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/webp-vs-png-vs-jpg</guid>
+    </item>
+    <item>
+      <title>How to Convert HEIC to JPG on Mac: 4 Easy Methods</title>
+      <link>https://pix-convert-seven.vercel.app/blog/heic-to-jpg-on-mac</link>
+      <description>Convert iPhone HEIC photos to JPG on Mac automatically or manually. Includes built-in Mac tools and our free online converter.</description>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/heic-to-jpg-on-mac</guid>
+    </item>
+    <item>
+      <title>Lossless vs Lossy Image Compression: Complete Guide</title>
+      <link>https://pix-convert-seven.vercel.app/blog/lossless-vs-lossy-image-compression</link>
+      <description>Understand the difference between lossless and lossy compression. When to use each type and how it affects image quality.</description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/lossless-vs-lossy-image-compression</guid>
+    </item>
+    <item>
+      <title>Best Image Format for Social Media in 2026: Complete Guide</title>
+      <link>https://pix-convert-seven.vercel.app/blog/best-image-format-for-social-media</link>
+      <description>Optimize your images for Instagram, Facebook, Twitter, LinkedIn, and TikTok. Recommended formats, sizes, and compression tips.</description>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/best-image-format-for-social-media</guid>
+    </item>
+    <item>
+      <title>How to Open HEIC Files on Android: Complete Guide</title>
+      <link>https://pix-convert-seven.vercel.app/blog/how-to-open-heic-files-on-android</link>
+      <description>Can Android open HEIC photos? Learn how to view and convert iPhone HEIC images on Samsung, Google Pixel, and other Android devices.</description>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/how-to-open-heic-files-on-android</guid>
+    </item>
+    <item>
+      <title>TIFF vs PNG vs JPEG: Best Format for Scanning Documents</title>
+      <link>https://pix-convert-seven.vercel.app/blog/tiff-vs-png-vs-jpeg-scanning</link>
+      <description>Which image format is best for document scanning? Compare TIFF, PNG, and JPEG for scans, OCR, and archival purposes.</description>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/tiff-vs-png-vs-jpeg-scanning</guid>
+    </item>
+    <item>
+      <title>SVG vs PNG for Web Design: When to Use Each</title>
+      <link>https://pix-convert-seven.vercel.app/blog/svg-vs-png-web-design</link>
+      <description>SVG vector vs PNG raster: which format works best for icons, logos, illustrations, and images on the modern web.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/svg-vs-png-web-design</guid>
+    </item>
+    <item>
+      <title>GIF vs PNG vs WebP for Animations: Which Is Best?</title>
+      <link>https://pix-convert-seven.vercel.app/blog/gif-vs-png-vs-webp-animation</link>
+      <description>Compare GIF, animated PNG (APNG), and animated WebP for creating and sharing animations on the web and social media.</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://pix-convert-seven.vercel.app/blog/gif-vs-png-vs-webp-animation</guid>
+    </item>
+  </channel>
+</rss>

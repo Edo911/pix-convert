@@ -1037,3 +1037,229 @@ details[open] .faq-item__question::after {
   font-size: 0.9rem;
   margin-top: 1rem;
 }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(115,126,241,0.14);
+  background: rgba(255,255,255,0.03);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(139,92,246,0.4);
+  background: rgba(99,102,241,0.08);
+}
+
+.blog-card__meta {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.blog-card__title {
+  font-family: var(--brand-font);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.blog-card__desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 0.75rem;
+  flex: 1;
+}
+
+.blog-card__readmore {
+  font-size: 0.85rem;
+  color: #818cf8;
+  font-weight: 600;
+}
+
+.blog-article {
+  max-width: 48rem;
+}
+
+.blog-article__header {
+  margin-bottom: 2rem;
+}
+
+.blog-article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.blog-article__category {
+  color: #818cf8;
+  font-weight: 600;
+}
+
+.blog-article__title {
+  font-family: var(--brand-font);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.blog-article__desc {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.blog-article__content {
+  line-height: 1.85;
+  font-size: 1rem;
+}
+
+.blog-article__content h2 {
+  font-family: var(--brand-font);
+  font-size: 1.35rem;
+  margin: 2rem 0 0.75rem;
+  color: var(--text);
+}
+
+.blog-article__content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+  color: #d0d4e0;
+}
+
+.blog-article__content p {
+  margin: 0 0 1rem;
+  color: #c4c9d8;
+}
+
+.blog-article__content ul,
+.blog-article__content ol {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+  color: #c4c9d8;
+}
+
+.blog-article__content li {
+  margin-bottom: 0.4rem;
+}
+
+.blog-article__content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.blog-article__content th,
+.blog-article__content td {
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(115,126,241,0.1);
+}
+
+.blog-article__content th {
+  color: #c4c9d8;
+  font-weight: 700;
+  font-size: 0.83rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.blog-article__content td {
+  color: #d0d4e0;
+}
+
+.blog-article__content strong {
+  color: var(--text);
+}
+
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.share-buttons__label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-right: 0.25rem;
+}
+
+.share-btn {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  color: #c4c9d8;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.share-btn:hover {
+  background: rgba(99,102,241,0.2);
+  color: #818cf8;
+  transform: translateY(-2px);
+}
+
+.blog-toc {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(115,126,241,0.14);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0 2rem;
+}
+
+.blog-toc__title {
+  display: block;
+  font-size: 0.9rem;
+  color: #c4c9d8;
+  margin-bottom: 0.5rem;
+}
+
+.blog-toc__list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.blog-toc__link {
+  font-size: 0.88rem;
+  color: #818cf8;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.blog-toc__link:hover {
+  text-decoration: underline;
+}
+
+.not-found-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

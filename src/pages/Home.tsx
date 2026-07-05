@@ -3,6 +3,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs'
 import { Converter } from '../components/Converter'
 import { Link } from 'react-router-dom'
 import { conversionRoutes } from './conversions'
+import { blogPosts } from './blog/blog-posts'
 import { getConversionCount } from '../lib/stats'
 
 export function Home() {
@@ -86,6 +87,26 @@ export function Home() {
             <Link to="/avif-to-png" className="inline-link">AVIF to PNG</Link>
             <Link to="/avif-to-jpg" className="inline-link">AVIF to JPG</Link>
           </div>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2>Latest from Our Blog</h2>
+        <div className="blog-grid">
+          {blogPosts.slice(0, 3).map((post) => (
+            <Link key={post.slug} to={`/blog/${post.slug}`} className="blog-card">
+              <div className="blog-card__meta">
+                <span>{post.date}</span>
+                <span>{post.readingTime}</span>
+              </div>
+              <h3 className="blog-card__title">{post.title}</h3>
+              <p className="blog-card__desc">{post.description}</p>
+              <span className="blog-card__readmore">Read more →</span>
+            </Link>
+          ))}
+        </div>
+        <div style={{ marginTop: '1rem' }}>
+          <Link to="/blog" className="inline-link">View all articles →</Link>
         </div>
       </section>
     </>

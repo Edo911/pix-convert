@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { conversionRoutes } from './conversions'
 import type { ConversionRoute } from './conversions'
 import { getConversionCount } from '../lib/stats'
+import { getRelatedPostsForPath } from '../lib/blog-links'
 
 interface ConversionPageProps {
   route: ConversionRoute
@@ -55,6 +56,7 @@ export function ConversionPage({ route }: ConversionPageProps) {
 
   const fromQuality = qualityData[route.fromFormat] || qualityData['JPEG']
   const toQuality = qualityData[route.toFormat] || qualityData['PNG']
+  const relatedPosts = getRelatedPostsForPath(route.path)
 
   return (
     <>
@@ -177,6 +179,25 @@ export function ConversionPage({ route }: ConversionPageProps) {
             {related.map((r) => (
               <Link key={r.path} to={r.path} className="related-link">
                 Convert {r.fromFormat} to {r.toFormat} →
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {relatedPosts.length > 0 && (
+        <section className="content-section related-section">
+          <h2>Related Articles</h2>
+          <div className="blog-grid">
+            {relatedPosts.slice(0, 3).map((post) => (
+              <Link key={post.slug} to={`/blog/${post.slug}`} className="blog-card">
+                <div className="blog-card__meta">
+                  <span>{post.date}</span>
+                  <span>{post.readingTime}</span>
+                </div>
+                <h3 className="blog-card__title">{post.title}</h3>
+                <p className="blog-card__desc">{post.description}</p>
+                <span className="blog-card__readmore">Read more →</span>
               </Link>
             ))}
           </div>

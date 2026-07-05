@@ -12,18 +12,10 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react'
-            }
-            if (id.includes('node_modules/heic2any')) {
-              return 'vendor-heic'
-            }
-            if (id.includes('node_modules/utif')) {
-              return 'vendor-utif'
-            }
-            if (id.includes('node_modules/gifenc')) {
-              return 'vendor-gif'
-            }
+            if (id.includes('heic2any')) return 'vendor-heic'
+            if (id.includes('utif')) return 'vendor-utif'
+            if (id.includes('gifenc')) return 'vendor-gif'
+            if (id.includes('react') || id.includes('react-dom') || id.includes('scheduler')) return 'vendor-react'
             return 'vendor'
           }
         },
