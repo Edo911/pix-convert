@@ -933,7 +933,7 @@ export const blogPosts: BlogPost[] = [
 <li>Enable resize to constrain large images to specific dimensions</li>
 <li>Download the ZIP archive for quick bulk transfer</li>
 </ul>`,
-    relatedSlugs: ['how-to-convert-webp-to-jpg', 'how-to-convert-heic-to-jpg-on-windows', 'image-compression-best-practices'],
+    relatedSlugs: ['webp-vs-png-vs-jpg', 'how-to-convert-heic-to-jpg-on-windows', 'lossless-vs-lossy-image-compression'],
   },
   {
     slug: 'image-compression-webp-vs-jpeg-quality',
