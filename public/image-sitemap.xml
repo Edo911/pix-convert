@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
@@ -26,14 +26,14 @@
     <loc>https://pix-convert-seven.vercel.app/blog/what-is-avif-format</loc>
     <image:image>
       <image:loc>https://pix-convert-seven.vercel.app/blog-images/what-is-avif-format.svg</image:loc>
-      <image:caption>AVIF image format explanation with AV1 compression technology overview</image:caption>
+      <image:caption>AVIF image format explained with AV1 compression technology overview</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://pix-convert-seven.vercel.app/blog/webp-vs-png-vs-jpg</loc>
     <image:image>
       <image:loc>https://pix-convert-seven.vercel.app/blog-images/webp-vs-png-vs-jpg.svg</image:loc>
-      <image:caption>WebP vs PNG vs JPG comparison showing file sizes and browser support</image:caption>
+      <image:caption>WebP vs PNG vs JPG file size and browser support comparison</image:caption>
     </image:image>
   </url>
   <url>
@@ -83,6 +83,104 @@
     <image:image>
       <image:loc>https://pix-convert-seven.vercel.app/blog-images/gif-vs-png-vs-webp-animation.svg</image:loc>
       <image:caption>GIF vs animated PNG vs animated WebP quality and file size comparison</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-convert-avif-to-jpg</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-convert-avif-to-jpg.svg</image:loc>
+      <image:caption>AVIF to JPG conversion guide with quality comparison and step-by-step instructions</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-convert-tiff-to-jpg</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-convert-tiff-to-jpg.svg</image:loc>
+      <image:caption>TIFF to JPG conversion showing file size reduction from massive scans to compact JPEGs</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-convert-svg-to-png</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-convert-svg-to-png.svg</image:loc>
+      <image:caption>SVG vector to PNG raster conversion for web design and social media use</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-convert-gif-to-png</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-convert-gif-to-png.svg</image:loc>
+      <image:caption>GIF to PNG conversion showing 256-color to 16.7 million color improvement</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-convert-ico-to-png</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-convert-ico-to-png.svg</image:loc>
+      <image:caption>ICO favicon file to PNG image conversion for design mockups and web use</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-convert-bmp-to-jpg</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-convert-bmp-to-jpg.svg</image:loc>
+      <image:caption>BMP bitmap to JPG compressed format conversion with dramatic file size reduction</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/avif-vs-webp-comparison</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/avif-vs-webp-comparison.svg</image:loc>
+      <image:caption>AVIF vs WebP next-gen image format comparison showing size, quality, and browser support</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/image-format-compatibility-2026</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/image-format-compatibility-2026.svg</image:loc>
+      <image:caption>Browser compatibility matrix for JPEG, PNG, WebP, AVIF, HEIC, GIF, and SVG formats</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/best-image-format-website-speed</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/best-image-format-website-speed.svg</image:loc>
+      <image:caption>Image format speed comparison showing Core Web Vitals impact for each format</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/privacy-friendly-online-converter</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/privacy-friendly-online-converter.svg</image:loc>
+      <image:caption>Browser-based privacy-preserving image converter diagram showing local-only processing</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/webp-vs-jpg-vs-png-vs-gif</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/webp-vs-jpg-vs-png-vs-gif.svg</image:loc>
+      <image:caption>Four-way image format comparison between WebP, JPEG, PNG, and GIF for different use cases</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/how-to-batch-convert-images-online</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/how-to-batch-convert-images-online.svg</image:loc>
+      <image:caption>Batch image conversion interface showing multiple files processed simultaneously</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/image-compression-webp-vs-jpeg-quality</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/image-compression-webp-vs-jpeg-quality.svg</image:loc>
+      <image:caption>WebP vs JPEG quality comparison grid at compression levels 50%, 75%, and 90%</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://pix-convert-seven.vercel.app/blog/png-vs-svg-web-design</loc>
+    <image:image>
+      <image:loc>https://pix-convert-seven.vercel.app/blog-images/png-vs-svg-web-design.svg</image:loc>
+      <image:caption>PNG raster vs SVG vector comparison for web design icons, logos, and illustrations</image:caption>
     </image:image>
   </url>
 </urlset>
