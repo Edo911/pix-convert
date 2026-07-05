@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { ConversionPage } from './pages/ConversionPage'
+import { About } from './pages/About'
+import { Privacy } from './pages/Privacy'
 import { conversionRoutes } from './pages/conversions'
 
 export function App() {
@@ -38,6 +40,8 @@ export function App() {
               element={<ConversionPage route={route} />}
             />
           ))}
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </main>
 
@@ -47,6 +51,8 @@ export function App() {
           {conversionRoutes.map((r) => (
             <Link key={r.path} to={r.path}>{r.fromFormat} to {r.toFormat}</Link>
           ))}
+          <Link to="/about">About</Link>
+          <Link to="/privacy">Privacy</Link>
         </div>
         <p>All processing runs locally in your browser. Files are never uploaded to a server.</p>
       </footer>

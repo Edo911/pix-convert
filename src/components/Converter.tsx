@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { zipSync } from 'fflate'
+import { incrementConversionCount } from '../lib/stats'
 import { DropZone } from './DropZone'
 import { FormatSelector } from './FormatSelector'
 import {
@@ -248,6 +249,7 @@ export function Converter({ fromHint, toHint }: ConverterProps) {
         converted.push(resultItem)
         setProgress({ current: index + 1, total: files.length })
       }
+      incrementConversionCount()
       setBatchResults(converted)
       setSelectedResultIndex(0)
       setResult(converted[0])

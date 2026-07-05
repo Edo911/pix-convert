@@ -3,6 +3,12 @@ import type { FaqItem } from '../pages/conversions'
 
 const BASE = 'https://pix-convert-seven.vercel.app'
 
+interface HowToStep {
+  name: string
+  text: string
+  url?: string
+}
+
 interface SEOProps {
   title: string
   description: string
@@ -10,9 +16,10 @@ interface SEOProps {
   ogImage?: string
   keywords?: string
   faq?: FaqItem[]
+  howTo?: { name: string; steps: HowToStep[] }
 }
 
-export function SEO({ title, description, path = '', ogImage, keywords, faq }: SEOProps) {
+export function SEO({ title, description, path = '', ogImage, keywords, faq, howTo }: SEOProps) {
   const url = `${BASE}${path}`
   const image = ogImage || `${BASE}/og-image.png`
 
@@ -42,6 +49,23 @@ export function SEO({ title, description, path = '', ogImage, keywords, faq }: S
                 '@type': 'Answer',
                 text: item.answer,
               },
+            })),
+          })}
+        </script>
+      )}
+
+      {howTo && howTo.steps.length > 0 && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: howTo.name,
+            step: howTo.steps.map((step, i) => ({
+              '@type': 'HowToStep',
+              position: i + 1,
+              name: step.name,
+              text: step.text,
+              ...(step.url ? { url: step.url } : {}),
             })),
           })}
         </script>
