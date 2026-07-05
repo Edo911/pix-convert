@@ -1,23 +1,8 @@
 import { SEO } from '../components/SEO'
+import { Breadcrumbs } from '../components/Breadcrumbs'
 import { Converter } from '../components/Converter'
 import { Link } from 'react-router-dom'
-
-const conversions = [
-  { path: '/heic-to-jpg', from: 'HEIC', to: 'JPG' },
-  { path: '/heic-to-png', from: 'HEIC', to: 'PNG' },
-  { path: '/png-to-jpg', from: 'PNG', to: 'JPG' },
-  { path: '/jpg-to-png', from: 'JPG', to: 'PNG' },
-  { path: '/webp-to-png', from: 'WebP', to: 'PNG' },
-  { path: '/webp-to-jpg', from: 'WebP', to: 'JPG' },
-  { path: '/avif-to-png', from: 'AVIF', to: 'PNG' },
-  { path: '/avif-to-jpg', from: 'AVIF', to: 'JPG' },
-  { path: '/tiff-to-png', from: 'TIFF', to: 'PNG' },
-  { path: '/tiff-to-jpg', from: 'TIFF', to: 'JPG' },
-  { path: '/svg-to-png', from: 'SVG', to: 'PNG' },
-  { path: '/gif-to-png', from: 'GIF', to: 'PNG' },
-  { path: '/bmp-to-jpg', from: 'BMP', to: 'JPG' },
-  { path: '/ico-converter', from: 'Image', to: 'ICO' },
-]
+import { conversionRoutes } from './conversions'
 
 export function Home() {
   return (
@@ -28,6 +13,8 @@ export function Home() {
         keywords="free image converter, online image converter, HEIC to JPG, PNG to JPG, JPG to PNG, WebP converter, AVIF converter, TIFF converter, SVG converter, privacy-first image converter"
       />
 
+      <Breadcrumbs items={[{ label: 'Home' }]} />
+
       <section className="home-hero">
         <h1 className="home-hero__title">Free Online Image Converter</h1>
         <p className="home-hero__subtitle">
@@ -37,14 +24,64 @@ export function Home() {
 
       <Converter />
 
-      <section className="home-links">
-        <h2>Popular Conversions</h2>
+      <section className="content-section">
+        <h2>All Conversion Types</h2>
         <div className="home-links__grid">
-          {conversions.map((c) => (
+          {conversionRoutes.map((c) => (
             <Link key={c.path} to={c.path} className="home-links__item">
-              Convert {c.from} to {c.to} →
+              Convert {c.fromFormat} to {c.toFormat} →
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2>Why Use PixConvert?</h2>
+        <div className="benefits-grid">
+          <div className="benefit-card">
+            <h3>100% Private</h3>
+            <p>All image conversion happens directly in your browser. Files are never uploaded to any server — your data never leaves your device.</p>
+          </div>
+          <div className="benefit-card">
+            <h3>No Signup Required</h3>
+            <p>Start converting immediately. No accounts, no emails, no passwords. Just select your images and convert.</p>
+          </div>
+          <div className="benefit-card">
+            <h3>Works Offline</h3>
+            <p>After the page loads once, PixConvert can work without an internet connection. The entire processing engine runs locally.</p>
+          </div>
+          <div className="benefit-card">
+            <h3>Batch Processing</h3>
+            <p>Convert multiple images at once. Download them individually or as a ZIP archive. Save time on bulk conversions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2>Popular Conversions</h2>
+        <p>Whether you need to convert iPhone HEIC photos to JPG for sharing, compress PNG images to JPEG for faster loading, or convert modern WebP/AVIF files to universally compatible formats, PixConvert handles it all. Our browser-based converter supports 14 different image format combinations — more than any other free online tool.</p>
+        <div className="popular-group">
+          <h3>Apple HEIC Conversion</h3>
+          <div className="inline-links">
+            <Link to="/heic-to-jpg" className="inline-link">HEIC to JPG</Link>
+            <Link to="/heic-to-png" className="inline-link">HEIC to PNG</Link>
+          </div>
+        </div>
+        <div className="popular-group">
+          <h3>Web Conversion</h3>
+          <div className="inline-links">
+            <Link to="/png-to-jpg" className="inline-link">PNG to JPG</Link>
+            <Link to="/jpg-to-png" className="inline-link">JPG to PNG</Link>
+            <Link to="/webp-to-png" className="inline-link">WebP to PNG</Link>
+            <Link to="/webp-to-jpg" className="inline-link">WebP to JPG</Link>
+          </div>
+        </div>
+        <div className="popular-group">
+          <h3>Next-Gen Formats</h3>
+          <div className="inline-links">
+            <Link to="/avif-to-png" className="inline-link">AVIF to PNG</Link>
+            <Link to="/avif-to-jpg" className="inline-link">AVIF to JPG</Link>
+          </div>
         </div>
       </section>
     </>

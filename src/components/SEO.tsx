@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import type { FaqItem } from '../pages/conversions'
 
 const BASE = 'https://pix-convert-seven.vercel.app'
 
@@ -8,9 +9,10 @@ interface SEOProps {
   path?: string
   ogImage?: string
   keywords?: string
+  faq?: FaqItem[]
 }
 
-export function SEO({ title, description, path = '', ogImage, keywords }: SEOProps) {
+export function SEO({ title, description, path = '', ogImage, keywords, faq }: SEOProps) {
   const url = `${BASE}${path}`
   const image = ogImage || `${BASE}/og-image.png`
 
@@ -27,6 +29,36 @@ export function SEO({ title, description, path = '', ogImage, keywords }: SEOPro
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {faq && faq.length > 0 && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faq.map((item) => ({
+              '@type': 'Question',
+              name: item.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.answer,
+              },
+            })),
+          })}
+        </script>
+      )}
+
+      {path && path !== '/' && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+              { '@type': 'ListItem', position: 2, name: title.split(' — ')[0], item: url },
+            ],
+          })}
+        </script>
+      )}
     </Helmet>
   )
 }

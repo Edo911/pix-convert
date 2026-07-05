@@ -44,7 +44,7 @@ export function App() {
       <footer className="footer">
         <div className="footer__links">
           <Link to="/">Home</Link>
-          {conversionRoutes.slice(0, 5).map((r) => (
+          {conversionRoutes.map((r) => (
             <Link key={r.path} to={r.path}>{r.fromFormat} to {r.toFormat}</Link>
           ))}
         </div>

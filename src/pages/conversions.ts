@@ -1,3 +1,8 @@
+export interface FaqItem {
+  question: string
+  answer: string
+}
+
 export interface ConversionRoute {
   path: string
   title: string
@@ -5,6 +10,9 @@ export interface ConversionRoute {
   keywords: string
   fromFormat: string
   toFormat: string
+  contentHtml: string
+  benefits: string[]
+  faq: FaqItem[]
 }
 
 export const conversionRoutes: ConversionRoute[] = [
@@ -15,6 +23,20 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'HEIC to JPG, HEIC converter, HEIF to JPG, iPhone HEIC to JPEG, free HEIC converter online',
     fromFormat: 'HEIC',
     toFormat: 'JPEG',
+    contentHtml: '<p>HEIC (High Efficiency Image Container) is Apple\'s modern image format introduced with iOS 11. It uses HEVC compression to store photos at roughly half the file size of JPEG while maintaining superior quality. However, HEIC files are not universally supported — many websites, apps, and older devices cannot open them.</p><p>Converting HEIC to JPG makes your photos viewable on any device, platform, or software. JPEG is the most widely supported image format in the world, compatible with everything from web browsers to photo printers. By converting HEIC to JPG, you sacrifice some compression efficiency for universal compatibility, ensuring your photos can be shared and viewed anywhere.</p>',
+    benefits: [
+      'Make iPhone and iPad photos viewable on Windows, Android, and Linux devices',
+      'Upload HEIC images to websites and social media that don\'t support the format',
+      'Reduce compatibility issues when sharing photos with friends and family',
+      'Preserve original quality while achieving universal compatibility',
+      'No software installation needed — everything runs in your browser',
+    ],
+    faq: [
+      { question: 'Why can\'t I open HEIC photos on my computer?', answer: 'HEIC is a proprietary format developed by Apple. Windows and most Android devices do not have built-in HEIC support. Converting to JPG solves this compatibility issue instantly.' },
+      { question: 'Does converting HEIC to JPG reduce quality?', answer: 'JPEG uses lossy compression, so there is a minor reduction in technical quality. However, at high quality settings (90%+), the visual difference is negligible while gaining universal compatibility.' },
+      { question: 'Can I convert multiple HEIC files at once?', answer: 'Yes. Drag and drop or select multiple HEIC images. PixConvert converts them all in batch and lets you download a ZIP archive with all converted files.' },
+      { question: 'Are my HEIC photos uploaded to a server?', answer: 'No. All conversion happens entirely in your browser using WebAssembly. Your files never leave your device — 100% privacy and security.' },
+    ],
   },
   {
     path: '/heic-to-png',
@@ -23,6 +45,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'HEIC to PNG, HEIF to PNG, iPhone HEIC to PNG, free HEIC to PNG converter, HEIC converter online',
     fromFormat: 'HEIC',
     toFormat: 'PNG',
+    contentHtml: '<p>PNG excels at preserving sharp edges and supports transparency — making it ideal for graphics, screenshots, and images that need further editing. Converting HEIC to PNG gives you a lossless image with full transparency support.</p><p>PNG is particularly useful when editing HEIC photos in editors that don\'t support the format, or when you need transparent backgrounds. PNG files are larger than both HEIC and JPEG, but they preserve every pixel perfectly — the go-to choice for professional graphic design.</p>',
+    benefits: [
+      'Edit HEIC photos in any image editor that supports PNG',
+      'Preserve transparency for logos, overlays, and design elements',
+      'Lossless conversion — every pixel preserved exactly as captured',
+      'Create PNGs from iPhone photos for web design and digital art',
+      'Batch convert multiple HEIC files without uploading to a server',
+    ],
+    faq: [
+      { question: 'Why convert HEIC to PNG instead of JPG?', answer: 'PNG offers lossless compression and supports transparency. Choose PNG when you need to edit images further, need transparent backgrounds, or want to preserve every pixel without quality loss.' },
+      { question: 'Will the PNG file be larger than the original HEIC?', answer: 'Yes. PNG files are typically 2-5x larger than HEIC because PNG uses lossless compression while HEIC uses highly efficient HEVC video compression.' },
+      { question: 'Can I convert HEIC to PNG on my phone?', answer: 'Yes. PixConvert works in any modern browser on any device — desktop, tablet, or phone. Just open the page and select your HEIC files.' },
+    ],
   },
   {
     path: '/png-to-jpg',
@@ -31,6 +66,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'PNG to JPG, PNG to JPEG, convert PNG to JPG online, free PNG to JPG converter, image converter',
     fromFormat: 'PNG',
     toFormat: 'JPEG',
+    contentHtml: '<p>PNG files are loved for their lossless quality and transparency support, but they can be unnecessarily large for photographs. Converting PNG to JPG dramatically reduces file size while maintaining excellent visual quality — making images load faster and easier to share.</p><p>JPEG compression works best on photographs and complex images with smooth color transitions. While you lose transparency and some technical quality, the file size reduction is typically 5-10x smaller, making JPG the standard format for web photos, email attachments, and social media.</p>',
+    benefits: [
+      'Reduce image file size by up to 90% without noticeable quality loss',
+      'Make images load faster on websites and in emails',
+      'Upload to social media platforms that prefer JPG format',
+      'Free up storage space by converting large PNG photos',
+      'Keep your files private — all conversion happens in your browser',
+    ],
+    faq: [
+      { question: 'Do I lose quality converting PNG to JPG?', answer: 'JPEG uses lossy compression, so there is a trade-off. At quality settings above 80%, the visual difference is barely noticeable while file size drops dramatically.' },
+      { question: 'What happens to transparency when converting PNG to JPG?', answer: 'JPEG does not support transparency. Transparent areas will be filled with white during conversion. If you need transparency, keep the image in PNG format.' },
+      { question: 'What quality setting should I use?', answer: 'For web use, 80-85% quality offers an excellent balance of small file size and good visual quality. For archiving, use 90-95%.' },
+    ],
   },
   {
     path: '/jpg-to-png',
@@ -39,6 +87,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'JPG to PNG, JPEG to PNG, convert JPG to PNG online, free JPG to PNG converter, image converter',
     fromFormat: 'JPEG',
     toFormat: 'PNG',
+    contentHtml: '<p>Converting JPG to PNG is the right choice when you need lossless quality, transparency support, or plan to edit an image further. While JPG excels at compression, each re-save introduces generational quality loss. PNG avoids this entirely with lossless compression.</p><p>This conversion is especially useful for screenshots, digital art, or images with text, where JPG compression artifacts can blur sharp edges. PNG preserves fine details perfectly and allows re-saving without quality degradation, making it ideal for ongoing editing workflows.</p>',
+    benefits: [
+      'Remove JPG compression artifacts for cleaner images',
+      'Edit and re-save images without generational quality loss',
+      'Preserve sharp edges, text, and fine details without blurring',
+      'Create high-quality PNGs for graphic design and web projects',
+      'Private conversion — files never leave your browser',
+    ],
+    faq: [
+      { question: 'Will a PNG be larger than the original JPG?', answer: 'Yes. PNG files are typically 3-10x larger than JPG because PNG uses lossless compression. The trade-off is perfect quality for editing.' },
+      { question: 'Can I make the background transparent after converting?', answer: 'This converter changes the format to PNG, which supports transparency. However, it does not automatically remove backgrounds — use an image editor for that.' },
+      { question: 'Is PNG better than JPG for printing?', answer: 'For printing, PNG is generally better as it preserves full quality without compression artifacts. TIFF is even better for professional print work if available.' },
+    ],
   },
   {
     path: '/webp-to-png',
@@ -47,6 +108,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'WebP to PNG, convert WebP to PNG online, free WebP to PNG converter, WebP converter, image format converter',
     fromFormat: 'WebP',
     toFormat: 'PNG',
+    contentHtml: '<p>WebP is Google\'s modern image format designed to replace JPEG, PNG, and GIF with superior compression. While WebP offers impressive file size savings, many image editors, legacy applications, and operating systems cannot open WebP files.</p><p>Converting WebP to PNG gives you a universally compatible lossless image that works in absolutely every image viewer, editor, and browser. This is essential when you download images from the web (many sites serve WebP by default) and need to edit them or use them in applications requiring traditional formats.</p>',
+    benefits: [
+      'Open WebP images in any image editor or viewer',
+      'Use WebP-downloaded images in graphic design projects',
+      'Preserve quality with lossless PNG conversion',
+      'Share downloaded web images with users on older software',
+      'Batch convert multiple WebP files privately in your browser',
+    ],
+    faq: [
+      { question: 'Why can\'t I open WebP images in my photo editor?', answer: 'WebP is a relatively new format. Many desktop applications, especially older Photoshop versions and Windows Photo Viewer, lack native WebP support. Converting to PNG solves this.' },
+      { question: 'Do websites use WebP?', answer: 'Yes. Chrome, Edge, and major websites (YouTube, Facebook, Shopify) serve WebP by default. Converting them to PNG makes them editable in any application.' },
+      { question: 'Does converting WebP to PNG lose quality?', answer: 'No. PNG uses lossless compression, so the converted image has the same visual quality as the original WebP. File size will be larger, but quality is preserved.' },
+    ],
   },
   {
     path: '/webp-to-jpg',
@@ -55,6 +129,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'WebP to JPG, WebP to JPEG, convert WebP to JPG online, free WebP converter, WebP to JPEG converter',
     fromFormat: 'WebP',
     toFormat: 'JPEG',
+    contentHtml: '<p>WebP images are increasingly common on the web, but can cause compatibility issues when sharing with others or working with legacy software. Converting WebP to JPG ensures your images work on absolutely any device or platform.</p><p>JPEG remains the internet\'s most universally supported image format. While WebP achieves better compression, JPEG works everywhere — from the oldest browsers to the latest smartphones. Converting to JPG trades compression efficiency for guaranteed universal compatibility.</p>',
+    benefits: [
+      'Make WebP images viewable on all devices and platforms',
+      'Share downloaded web images without format issues',
+      'Upload WebP content to platforms that only accept JPEG',
+      'Send images via email with guaranteed recipient access',
+      'Private conversion — files never leave your browser',
+    ],
+    faq: [
+      { question: 'Is WebP better than JPEG?', answer: 'WebP typically offers 25-35% better compression than JPEG at the same quality. However, JPEG\'s universal support makes it safer for sharing.' },
+      { question: 'Will I lose quality converting WebP to JPG?', answer: 'Since WebP is already compressed, re-compressing to JPEG may cause additional quality loss. Use a high quality setting (85%+) to minimize this.' },
+      { question: 'How do I know if an image is WebP?', answer: 'WebP files have a .webp extension. If you save an image from Chrome, it may save as WebP by default. Our converter auto-detects the format.' },
+    ],
   },
   {
     path: '/avif-to-png',
@@ -63,6 +150,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'AVIF to PNG, convert AVIF to PNG online, free AVIF converter, AVIF to PNG converter, next-gen image converter',
     fromFormat: 'AVIF',
     toFormat: 'PNG',
+    contentHtml: '<p>AVIF (AV1 Image File Format) is the cutting-edge image format based on the AV1 video codec. It delivers exceptional compression — typically 50% smaller than JPEG at the same quality. However, AVIF support is limited to the newest browsers and applications.</p><p>Converting AVIF to PNG gives you a lossless, universally compatible image. While you lose the compression benefits of AVIF, PNG is supported everywhere and preserves every pixel perfectly — ideal for design workflows and sharing with users on older software.</p>',
+    benefits: [
+      'Use next-gen AVIF images in any application or workflow',
+      'Share AVIF photos with users on older hardware and software',
+      'Preserve full image quality with lossless PNG conversion',
+      'Edit AVIF images in editors lacking AVIF support',
+      'Upload to platforms and social media that only accept PNG',
+    ],
+    faq: [
+      { question: 'What is AVIF?', answer: 'AVIF is the most advanced image format available, using the AV1 video codec for compression. It offers significantly better compression than JPEG, WebP, and PNG.' },
+      { question: 'Which browsers support AVIF?', answer: 'Chrome 85+, Firefox 93+, Edge 121+, Opera 71+, and Safari 16+ support AVIF. Many image editors and legacy software do not support it yet.' },
+      { question: 'Is there quality loss converting AVIF to PNG?', answer: 'No. PNG uses lossless compression, so the converted image is a perfect pixel-level replica of the original AVIF. File will be larger, but quality is fully preserved.' },
+    ],
   },
   {
     path: '/avif-to-jpg',
@@ -71,6 +171,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'AVIF to JPG, AVIF to JPEG, convert AVIF to JPG online, free AVIF converter, AVIF to JPEG converter',
     fromFormat: 'AVIF',
     toFormat: 'JPEG',
+    contentHtml: '<p>AVIF is the future of image compression, but the present still runs on JPEG. If you have AVIF images and need to share them widely, converting to JPEG is the most practical solution for maximum compatibility.</p><p>JPEG is supported by every device, platform, and software application created in the last 25 years. While AVIF files are smaller, JPEG files open anywhere without special software or codecs. This makes JPEG the safest format for sharing images with a broad audience.</p>',
+    benefits: [
+      'Convert next-gen AVIF to the universally compatible JPEG format',
+      'Share AVIF photos with anyone regardless of their device or software',
+      'Upload to all social media platforms and web services',
+      'Attach to emails with guaranteed recipient access',
+      'Process entirely in your browser — no uploads needed',
+    ],
+    faq: [
+      { question: 'Why convert AVIF to JPG instead of keeping AVIF?', answer: 'AVIF support is still limited. By converting to JPG, you ensure your images can be viewed by everyone without compatibility issues.' },
+      { question: 'Does converting AVIF to JPG reduce quality?', answer: 'Yes, JPEG uses lossy compression. However, at quality settings 90%+, the visual difference is minimal while gaining universal support.' },
+      { question: 'Can I convert AVIF files on my phone?', answer: 'Yes. PixConvert works on any device with a modern browser — desktop, tablet, or smartphone.' },
+    ],
   },
   {
     path: '/tiff-to-png',
@@ -79,6 +192,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'TIFF to PNG, convert TIFF to PNG online, free TIFF converter, TIF to PNG, TIFF image converter',
     fromFormat: 'TIFF',
     toFormat: 'PNG',
+    contentHtml: '<p>TIFF files are the gold standard for professional photography, scanning, and print publishing — storing massive amounts of image data with no compression. While perfect for archival, TIFF files are impractical for web use, email attachments, and everyday sharing due to their enormous size.</p><p>Converting TIFF to PNG retains the lossless quality you need while producing much smaller files that can be opened by any device or application. PNG handles high-resolution images well and is supported by all web browsers, making it the ideal bridge between professional TIFF archives and everyday digital use.</p>',
+    benefits: [
+      'Dramatically reduce TIFF file sizes while preserving lossless quality',
+      'Share scanned documents and high-res photos without compatibility issues',
+      'Open professional TIFF images on any device including smartphones',
+      'Upload TIFF content to websites and platforms that don\'t support the format',
+      'Process multi-page TIFF files privately in your browser',
+    ],
+    faq: [
+      { question: 'Why are TIFF files so large?', answer: 'TIFF is designed for maximum quality with minimal to no compression. A single high-resolution TIFF can be 50-500MB, making it impractical for sharing.' },
+      { question: 'Do I lose quality converting TIFF to PNG?', answer: 'No. PNG uses lossless compression, so image quality is fully preserved while file size is significantly reduced compared to uncompressed TIFF.' },
+      { question: 'Can I convert multi-page TIFF files?', answer: 'Yes. PixConvert processes all pages from a multi-page TIFF and converts each page to a separate PNG file.' },
+    ],
   },
   {
     path: '/tiff-to-jpg',
@@ -87,6 +213,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'TIFF to JPG, TIFF to JPEG, convert TIFF to JPG online, free TIFF to JPG converter, TIF to JPEG',
     fromFormat: 'TIFF',
     toFormat: 'JPEG',
+    contentHtml: '<p>TIFF files from professional cameras and scanners can be hundreds of megabytes — completely impractical for everyday use. Converting TIFF to JPG can reduce file size by 90% or more while maintaining excellent visual quality, making your images suitable for email, web upload, and social media.</p><p>JPEG is the most efficient format for photographs, offering superb compression while keeping images visually identical to the original at moderate quality settings. This conversion is ideal when you need to share high-resolution TIFF scans without sending gigantic files.</p>',
+    benefits: [
+      'Reduce TIFF file size by 90-95% for practical sharing',
+      'Email high-res scanned images without size limits',
+      'Upload professional photography to websites and social media',
+      'Archive photos in a space-efficient format',
+      'All processing runs locally — files stay on your device',
+    ],
+    faq: [
+      { question: 'What quality setting should I use for TIFF conversion?', answer: 'For photos, 85-95% quality offers an excellent balance of size and quality. For scanned documents, 70-80% is usually sufficient for readability.' },
+      { question: 'Is JPEG quality good enough for printing TIFF photos?', answer: 'For large prints, use 95%+ quality. For standard 4x6 or 5x7 prints, 85% quality is virtually indistinguishable from the original TIFF.' },
+      { question: 'Can I convert TIFF to JPG without losing EXIF data?', answer: 'Yes. The conversion preserves most metadata including camera information, date, and GPS coordinates from the original TIFF.' },
+    ],
   },
   {
     path: '/svg-to-png',
@@ -95,6 +234,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'SVG to PNG, convert SVG to PNG online, free SVG to PNG converter, SVG to PNG raster, vector to PNG',
     fromFormat: 'SVG',
     toFormat: 'PNG',
+    contentHtml: '<p>SVG (Scalable Vector Graphics) files are ideal for logos, icons, and illustrations due to their infinite scalability. However, many applications and platforms cannot render SVG files directly — they require rasterized PNG images instead.</p><p>Converting SVG to PNG gives you a pixel-perfect image at your desired resolution, compatible with every application, website, and device. You can specify the output dimensions to get exactly the size you need — whether for a website hero image, a social media post, or a print project.</p>',
+    benefits: [
+      'Use vector icons and logos in any application that requires PNG',
+      'Specify exact output dimensions for your design needs',
+      'Upload SVG-based graphics to platforms that don\'t support vectors',
+      'Create high-resolution PNGs from SVGs for print materials',
+      'Convert multiple SVGs at once with private browser processing',
+    ],
+    faq: [
+      { question: 'What is the difference between SVG and PNG?', answer: 'SVG is a vector format that scales infinitely without losing quality. PNG is a raster format with fixed dimensions. PNG is supported everywhere; SVG is not.' },
+      { question: 'What resolution should I choose for SVG to PNG?', answer: 'For web use, 1920px width is standard. For Retina displays, double your target size. For print, use at least 300 DPI.' },
+      { question: 'Does SVG to PNG conversion preserve transparency?', answer: 'Yes. PNG supports full transparency, so transparent SVG elements remain transparent in the output PNG.' },
+    ],
   },
   {
     path: '/gif-to-png',
@@ -103,6 +255,19 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'GIF to PNG, convert GIF to PNG online, free GIF to PNG converter, GIF frame extractor, GIF to PNG online',
     fromFormat: 'GIF',
     toFormat: 'PNG',
+    contentHtml: '<p>GIF is one of the oldest image formats on the web, limited to 256 colors and huge file sizes for animated content. Converting GIF frames to PNG gives you access to millions of colors, true transparency, and much better image quality for still images.</p><p>This conversion is ideal when you find the perfect reaction GIF but want to use a single frame as a static image, or when you need to extract frames from an animated GIF for use in design projects. PNG preserves the frame with full color depth and no quality loss.</p>',
+    benefits: [
+      'Extract individual frames from animated GIFs as high-quality PNGs',
+      'Upgrade GIF images to full color depth (64K vs 256 colors)',
+      'Remove the 256-color banding and dithering artifacts from GIFs',
+      'Use GIF content in design projects that require modern formats',
+      'Batch convert multiple GIFs privately in your browser',
+    ],
+    faq: [
+      { question: 'Will an animated GIF become multiple PNG files?', answer: 'Yes. Each frame of the animated GIF is extracted as a separate PNG image, giving you individual high-quality still images.' },
+      { question: 'Will PNG be larger than the original GIF?', answer: 'Generally yes, because PNG supports millions of colors while GIF is limited to 256. The quality improvement usually justifies the larger file size.' },
+      { question: 'Is PNG better quality than GIF?', answer: 'Yes. PNG supports 16.7 million colors and true alpha transparency, while GIF is limited to 256 colors and only binary transparency.' },
+    ],
   },
   {
     path: '/bmp-to-jpg',
@@ -111,13 +276,39 @@ export const conversionRoutes: ConversionRoute[] = [
     keywords: 'BMP to JPG, BMP to JPEG, convert BMP to JPG online, free BMP converter, bitmap to JPEG converter',
     fromFormat: 'BMP',
     toFormat: 'JPEG',
+    contentHtml: '<p>BMP (Bitmap) is one of the oldest and simplest image formats — storing raw pixel data with no compression. This results in enormous file sizes: a single BMP image can be 10-50x larger than the same image in JPEG format. BMP was common in early Windows applications but is largely obsolete for modern use.</p><p>Converting BMP to JPG reduces file size dramatically while maintaining excellent visual quality. This makes your images practical for sharing online, sending via email, or storing on devices with limited space. JPG is universally supported and offers adjustable quality settings so you can balance size and quality.</p>',
+    benefits: [
+      'Reduce BMP file size by 90-98% with JPG compression',
+      'Modernize legacy BMP images for use on websites and social media',
+      'Free up storage space by converting old BMP archives',
+      'Share scanned BMP documents as efficiently compressed JPGs',
+      'Process all conversions privately in your browser',
+    ],
+    faq: [
+      { question: 'Why are BMP files so huge?', answer: 'BMP stores raw pixel data without any compression whatsoever. A 1920x1080 BMP can be 6MB while the same image as JPG is 200KB.' },
+      { question: 'Do I lose quality converting BMP to JPG?', answer: 'JPG uses lossy compression, so there is some quality reduction. At quality settings above 85%, the difference is visually imperceptible for most uses.' },
+      { question: 'Is BMP still used today?', answer: 'BMP is rarely used outside of legacy applications and some scientific/medical imaging. For modern use, JPG, PNG, or WebP are much more practical.' },
+    ],
   },
   {
     path: '/ico-converter',
     title: 'Free ICO Converter Online — Convert Images to ICO Format',
     description: 'Convert PNG, JPG, and other images to ICO format for favicons and app icons. Create Windows icon files directly in your browser. Free and private.',
     keywords: 'ICO converter, image to ICO, PNG to ICO, JPG to ICO, favicon converter, free ICO converter online, icon converter',
-    fromFormat: 'PNG',
+    fromFormat: 'Image',
     toFormat: 'ICO',
+    contentHtml: '<p>ICO (Icon) files are required for website favicons, Windows application icons, and desktop shortcuts. Creating ICO files traditionally required special software, but PixConvert lets you create them instantly from any image format in your browser.</p><p>An ICO file can contain multiple sizes of the same icon, allowing Windows and browsers to pick the right size for each context. The converter automatically generates the optimal sizes for maximum compatibility — from browser tabs at 16x16 to Windows taskbar at 48x48 and high-DPI displays at 256x256.</p>',
+    benefits: [
+      'Create website favicons from any image format',
+      'Generate Windows application icons without special software',
+      'Make desktop shortcuts and folder icons for Windows',
+      'Produce device icons for mobile apps and homescreen bookmarks',
+      'No uploads needed — everything runs in your browser',
+    ],
+    faq: [
+      { question: 'What sizes do I need for a favicon?', answer: 'For modern websites, a 32x32 favicon is standard. For best compatibility across all devices, include 16x16, 32x32, and 48x48 sizes.' },
+      { question: 'Can I create a multi-size ICO file?', answer: 'Yes. The converter can generate ICO files containing multiple sizes so Windows and browsers can choose the appropriate resolution.' },
+      { question: 'What image should I start with for the best ICO?', answer: 'Start with a square PNG image at least 256x256 pixels. The converter will scale it down to create all the smaller icon sizes needed.' },
+    ],
   },
 ]
