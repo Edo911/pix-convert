@@ -18,6 +18,9 @@
   --accent: #818cf8;
   --accent-strong: #7c3aed;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+  --brand-font: 'Space Grotesk', 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+  --rainbow: linear-gradient(135deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #9b59b6, #e056a0);
 }
 
 *,
@@ -79,11 +82,17 @@ textarea {
 .header__logo {
   display: grid;
   place-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 1rem;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  box-shadow: 0 18px 40px rgba(99, 102, 241, 0.22);
+  background: var(--rainbow);
+  box-shadow: 0 18px 50px rgba(255, 107, 107, 0.15), 0 18px 50px rgba(77, 150, 255, 0.15);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.header__logo svg {
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .header__logo svg {
@@ -92,17 +101,29 @@ textarea {
 }
 
 .header__brand:hover .header__logo {
-  transform: translateY(-3px) scale(1.06);
+  transform: translateY(-4px) scale(1.08) rotate(-3deg);
 }
 
-.header__brand:hover h1 {
-  text-decoration: underline;
+.header__brand:hover .brand-name {
+  transform: scale(1.04);
 }
 
 .header h1 {
   margin: 0;
   font-size: clamp(1.75rem, 4vw, 2.35rem);
   letter-spacing: -0.03em;
+}
+
+.brand-name {
+  font-family: var(--brand-font);
+  font-weight: 700;
+  background: var(--rainbow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  letter-spacing: -0.04em;
+  filter: drop-shadow(0 0 20px rgba(255, 107, 107, 0.15));
 }
 
 .header p {
@@ -152,14 +173,16 @@ textarea {
 }
 
 .home-hero__title {
+  font-family: var(--brand-font);
   font-size: clamp(1.8rem, 5vw, 2.8rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.04em;
   margin: 0 0 0.75rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #818cf8 100%);
+  background: var(--rainbow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(255, 107, 107, 0.1));
 }
 
 .home-hero__subtitle {
@@ -704,11 +727,12 @@ textarea {
 }
 
 .conversion-hero__title {
+  font-family: var(--brand-font);
   font-size: clamp(1.6rem, 4vw, 2.2rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   margin: 0 0 0.75rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #818cf8 100%);
+  background: var(--rainbow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

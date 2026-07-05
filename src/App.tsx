@@ -14,17 +14,26 @@ export function App() {
           <span className="header__logo" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
-                <linearGradient id="pixconvertLogo" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#8b5cf6" />
-                  <stop offset="100%" stopColor="#6366f1" />
+                <linearGradient id="logoRainbow" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#ff6b6b"/>
+                  <stop offset="25%" stopColor="#ffd93d"/>
+                  <stop offset="50%" stopColor="#6bcb77"/>
+                  <stop offset="75%" stopColor="#4d96ff"/>
+                  <stop offset="100%" stopColor="#9b59b6"/>
                 </linearGradient>
+                <filter id="logoGlow">
+                  <feGaussianBlur stdDeviation="2" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
               </defs>
-              <rect x="10" y="10" width="28" height="28" rx="9" fill="url(#pixconvertLogo)" />
-              <path d="M18 24h12M24 18v12" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
+              <rect x="8" y="8" width="32" height="32" rx="10" fill="url(#logoRainbow)" filter="url(#logoGlow)"/>
+              <rect x="12" y="12" width="24" height="24" rx="7" fill="#0f0f13"/>
+              <path d="M20 26l4-4 4 4" stroke="url(#logoRainbow)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M20 22l4 4 4-4" stroke="url(#logoRainbow)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
             </svg>
           </span>
           <div>
-            <h1>PixConvert</h1>
+            <h1 className="brand-name">PixConvert</h1>
             <p>Convert images locally in your browser — no servers, no signup, files up to 50 MB.</p>
           </div>
         </Link>
