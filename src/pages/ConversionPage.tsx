@@ -70,14 +70,16 @@ export function ConversionPage({ route }: ConversionPageProps) {
       <Breadcrumbs
         items={[
           { label: 'Home', href: '/' },
-          { label: route.title.split(' — ')[0] },
+          { label: `Convert ${route.fromFormat} to ${route.toFormat}` },
         ]}
       />
 
       <section className="conversion-hero">
         <h1 className="conversion-hero__title">Convert {route.fromFormat} to {route.toFormat} Online</h1>
         <p className="conversion-hero__desc">{route.description}</p>
-        <p className="social-proof">✦ {getConversionCount().toLocaleString()} images converted so far — 100% private, no uploads</p>
+        {getConversionCount() > 0 && (
+          <p className="social-proof">✦ {getConversionCount().toLocaleString()} images converted so far — 100% private, no uploads</p>
+        )}
       </section>
 
       <Converter fromHint={route.fromFormat} toHint={route.toFormat} />

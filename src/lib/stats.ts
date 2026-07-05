@@ -14,7 +14,9 @@ function loadStats(): Stats {
 }
 
 function saveStats(stats: Stats) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(stats))
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(stats))
+  } catch { /* storage full or disabled - silently ignore */ }
 }
 
 export function getConversionCount(): number {

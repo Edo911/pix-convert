@@ -21,7 +21,9 @@ export function Home() {
         <p className="home-hero__subtitle">
           Convert images between any format — HEIC, JPEG, PNG, WebP, AVIF, TIFF, GIF, BMP, SVG, ICO
         </p>
-        <p className="social-proof social-proof--hero">✦ {getConversionCount().toLocaleString()} images converted so far — 100% private, no uploads</p>
+        {getConversionCount() > 0 && (
+          <p className="social-proof social-proof--hero">✦ {getConversionCount().toLocaleString()} images converted so far — 100% private, no uploads</p>
+        )}
       </section>
 
       <Converter />
