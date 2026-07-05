@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { zipSync } from 'fflate'
 import { incrementConversionCount } from '../lib/stats'
-import { addToHistory, getHistory, type HistoryEntry } from '../lib/history'
+import { addToHistory, getHistory } from '../lib/history'
 import { DropZone } from './DropZone'
 import { FormatSelector } from './FormatSelector'
 import {

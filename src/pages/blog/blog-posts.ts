@@ -11,7 +11,7 @@ export interface BlogPost {
   image: string
   alt: string
   author?: string
-  lastUpdated?: string
+  lastUpdated?: string | null
   sources?: { name: string; url: string }[]
   takeaways?: string[]
 }
