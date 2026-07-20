@@ -17,9 +17,14 @@ interface SEOProps {
   keywords?: string
   faq?: FaqItem[]
   howTo?: { name: string; steps: HowToStep[] }
+  ogType?: string
+  articlePublished?: string
+  articleModified?: string
+  articleAuthor?: string
+  articleTag?: string
 }
 
-export function SEO({ title, description, path = '', ogImage, keywords, faq, howTo }: SEOProps) {
+export function SEO({ title, description, path = '', ogImage, keywords, faq, howTo, ogType, articlePublished, articleModified, articleAuthor, articleTag }: SEOProps) {
   const url = `${BASE}${path}`
   const image = ogImage || `${BASE}/og-image.svg`
 
@@ -30,6 +35,7 @@ export function SEO({ title, description, path = '', ogImage, keywords, faq, how
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={url} />
       <meta property="og:url" content={url} />
+      <meta property="og:type" content={ogType || (path.startsWith('/blog/') ? 'article' : 'website')} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
@@ -39,6 +45,11 @@ export function SEO({ title, description, path = '', ogImage, keywords, faq, how
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {articlePublished && <meta property="article:published_time" content={articlePublished} />}
+      {articleModified && <meta property="article:modified_time" content={articleModified} />}
+      {articleAuthor && <meta property="article:author" content={articleAuthor} />}
+      {articleTag && <meta property="article:tag" content={articleTag} />}
 
       {faq && faq.length > 0 && (
         <script type="application/ld+json">

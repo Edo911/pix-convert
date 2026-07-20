@@ -140,6 +140,10 @@ export function BlogArticle({ slug }: { slug: string }) {
         description={post.description}
         path={`/blog/${post.slug}`}
         keywords={post.keywords}
+        articlePublished={post.date}
+        articleModified={post.lastUpdated || undefined}
+        articleAuthor={post.author}
+        articleTag={post.category}
       />
 
       <Breadcrumbs items={[

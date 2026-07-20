@@ -36,7 +36,7 @@ export function App() {
             </svg>
           </span>
           <div>
-            <h1 className="brand-name">PixConvert</h1>
+            <span className="brand-name" role="img" aria-label="PixConvert">PixConvert</span>
             <p>Convert images locally in your browser — no servers, no signup, files up to 50 MB.</p>
           </div>
         </Link>
