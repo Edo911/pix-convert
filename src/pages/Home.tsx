@@ -49,8 +49,10 @@ export function Home() {
       <Converter />
 
       <section className="content-section">
-        <h2>All Conversion Types</h2>
+        <h2>All Tools</h2>
         <div className="home-links__grid">
+          <Link to="/compress" className="home-links__item">Compress Images →</Link>
+          <Link to="/resize" className="home-links__item">Resize Images →</Link>
           {conversionRoutes.map((c) => (
             <Link key={c.path} to={c.path} className="home-links__item">
               Convert {c.fromFormat} to {c.toFormat} →

@@ -2,6 +2,9 @@ import { Routes, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { ConversionPage } from './pages/ConversionPage'
+import { CompressPage } from './pages/CompressPage'
+import { ResizePage } from './pages/ResizePage'
+import { ToolsPage } from './pages/ToolsPage'
 import { About } from './pages/About'
 import { Privacy } from './pages/Privacy'
 import { BlogIndex, BlogArticle } from './pages/blog'
@@ -45,6 +48,9 @@ export function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/compress" element={<CompressPage />} />
+          <Route path="/resize" element={<ResizePage />} />
+          <Route path="/tools" element={<ToolsPage />} />
           {conversionRoutes.map((route) => (
             <Route
               key={route.path}
@@ -65,6 +71,9 @@ export function App() {
       <footer className="footer">
         <div className="footer__links">
           <Link to="/">Home</Link>
+          <Link to="/compress">Compress</Link>
+          <Link to="/resize">Resize</Link>
+          <Link to="/tools">All Tools</Link>
           {conversionRoutes.map((r) => (
             <Link key={r.path} to={r.path}>{r.fromFormat} to {r.toFormat}</Link>
           ))}
