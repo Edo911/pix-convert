@@ -1417,4 +1417,179 @@ export const blogPosts: BlogPost[] = [
 </ul>`,
     relatedSlugs: ['best-image-format-website-speed', 'webp-vs-png-vs-jpg', 'how-to-compress-images-for-web'],
   },
+  {
+    slug: 'why-your-iphone-photos-are-heic-and-what-to-do',
+    title: 'Why Your iPhone Photos Are HEIC (And What to Do About It)',
+    description: 'iPhone saves photos as HEIC files by default. Here is why Apple chose this format, and how to deal with compatibility problems when sharing or editing.',
+    keywords: 'iPhone HEIC photos, why are iPhone photos HEIC, HEIC format iPhone, change iPhone photo format, HEIC compatibility',
+    date: '2026-07-15',
+    lastUpdated: null,
+    readingTime: '6 min read',
+    category: 'Guide',
+    image: '/blog-images/why-your-iphone-photos-are-heic.svg',
+    alt: 'iPhone camera settings screen showing HEIC format option with comparison to JPEG file sizes',
+    author: 'Sarah Chen',
+    takeaways: [
+      'Apple switched to HEIC in iOS 11 because it cuts photo file sizes roughly in half',
+      'HEIC works great within the Apple ecosystem but causes headaches on Windows and Android',
+      'You can switch your iPhone to save as JPEG in Settings, or convert existing HEIC files later',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>HEIC halves storage usage compared to JPEG without sacrificing visible quality.</li><li>The format creates friction when sharing photos with non-Apple users.</li><li>Two practical fixes: change your camera settings or convert files when needed.</li></ul></div>
+<h2>The Short Version</h2>
+<p>If you have an iPhone running iOS 11 or later, your camera saves photos as HEIC files by default. You probably did not notice this until you tried opening one on a Windows PC, shared it with an Android friend, or uploaded it to a website that rejected the file. HEIC is technically a better format than JPEG, but "better" does not matter much when your files will not open.</p>
+<h2>Why Apple Picked HEIC</h2>
+<p>Apple made the switch for two straightforward reasons. First, HEIC files are about half the size of JPEG files at the same perceived quality. That means more photos fit on your phone without paying for extra iCloud storage. Second, HEIC supports features that JPEG simply cannot do — transparency, 16-bit color, and the ability to pack burst shots and Live Photos into a single file.</p>
+<p>From Apple's perspective, it was a clear win. Their devices could handle it natively, iCloud could store more photos, and the quality was objectively better. The problem is that Apple did not think (or care) much about what happens when those photos leave the Apple bubble.</p>
+<h2>Where Things Break Down</h2>
+<p>Windows does not ship with HEIC support. Neither do most Android phones, at least not out of the box. Web browsers are getting better at it, but plenty of apps and websites still choke on HEIC files. If you have ever tried to attach an iPhone photo to an email and watched it fail, this is usually why.</p>
+<p>The most common pain points people run into:</p>
+<ul>
+<li><strong>Windows File Explorer</strong> shows blank thumbnails for HEIC files until you install the HEIF extension from the Microsoft Store.</li>
+<li><strong>Web upload forms</strong> sometimes reject HEIC because the server does not recognize the file type.</li>
+<li><strong>Social media</strong> platforms generally handle it now, but older apps may not.</li>
+<li><strong>Photo editing software</strong> like older versions of Photoshop cannot open HEIC without a plugin.</li>
+</ul>
+<h2>Two Ways to Fix It</h2>
+<p>The first approach is to change your iPhone settings. Go to Settings → Camera → Formats and switch to "Most Compatible." This makes your camera save everything as JPEG going forward. The downside is that each photo takes up roughly twice as much space. If you have a 64 GB iPhone, you will feel it.</p>
+<p>The second approach keeps HEIC as your default and converts files when you actually need to. This gives you the best of both worlds: small files on your phone, and JPG output when sharing or editing. Tools like PixConvert let you batch-convert HEIC photos right in your browser without uploading anything to a server.</p>
+<h2>Which Approach Makes More Sense</h2>
+<p>For most people, keeping HEIC as the default and converting when needed is the smarter move. You save storage on your phone, and the occasional conversion takes a few seconds. The only time switching to JPEG makes more sense is if you regularly share photos with people or systems that cannot handle HEIC, and you do not want to deal with the extra step.</p>`,
+    relatedSlugs: ['heic-vs-jpg-complete-guide', 'how-to-convert-heic-to-jpg-on-windows', 'how-to-convert-heic-to-jpg-on-iphone', 'how-to-convert-heic-to-jpg-on-android-phone'],
+  },
+  {
+    slug: 'common-mistakes-when-converting-images',
+    title: '7 Mistakes People Make When Converting Image Formats',
+    description: 'Avoid these common pitfalls when converting between image formats. Learn what actually matters for quality, file size, and compatibility.',
+    keywords: 'image conversion mistakes, converting image formats wrong, image quality loss, best settings for image conversion, JPG quality settings',
+    date: '2026-07-12',
+    lastUpdated: null,
+    readingTime: '5 min read',
+    category: 'Tips',
+    image: '/blog-images/common-mistakes-when-converting-images.svg',
+    alt: 'Comparison showing the same image converted with poor settings versus optimal settings, highlighting quality differences',
+    author: 'Alex Martinez',
+    takeaways: [
+      'Saving JPEG at quality 50 destroys the image — use 80% or higher for web use',
+      'Converting to JPEG removes transparency and there is no way to recover it',
+      'Re-saving the same JPEG file repeatedly degrades quality each time',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>Quality settings below 80% on JPEG create visible artifacts that look unprofessional.</li><li>Always keep your originals — convert copies, not the only copy.</li><li>Match the output format to where the image will actually be used.</li></ul></div>
+<h2>Mistake 1: Cranking Compression Too High</h2>
+<p>The most frequent mistake is setting JPEG quality way too low. People see "reduce file size" and immediately drag the slider to 20% or 30%. The result is an image full of blocky artifacts, blurry edges, and muddy colors. For web use, 80-85% quality gives you a solid balance between size and appearance. Below 70%, most people will notice the degradation. Below 50%, the image looks broken.</p>
+<h2>Mistake 2: Converting to JPEG When You Need Transparency</h2>
+<p>JPEG does not support transparency. Period. If your source image has a transparent background (like a logo on a PNG), converting to JPEG will replace that transparency with white. There is no way to undo this after the fact. Always check whether your image uses transparency before choosing JPEG as the output.</p>
+<h2>Mistake 3: Re-saving the Same File Over and Over</h2>
+<p>Every time you open a JPEG, edit it slightly, and save it again, the compression runs again and丢掉more data. This is called generational loss. After five or six cycles, the image starts looking noticeably worse. If you need to iterate on an image, work with PNG or TIFF until you are done, then convert to JPEG as the final step.</p>
+<h2>Mistake 4: Ignoring the Source Format</h2>
+<p>Converting a JPEG to PNG does not magically restore quality that was lost during the original JPEG compression. You just get a larger file with the same artifacts baked in. People sometimes think "PNG is lossless, so converting to PNG makes my image better." It does not. You need the original uncompressed source for that.</p>
+<h2>Mistake 5: Using the Wrong Format for the Destination</h2>
+<p>Uploading a massive 15 MB TIFF to a social media platform? They are going to compress it anyway, and probably not in a way you like. Converting to a reasonable JPEG or WebP first gives you more control over how the final image looks. Similarly, sending a 4000-pixel PNG as an email attachment is inconsiderate — resize and compress it first.</p>
+<h2>Mistake 6: Forgetting About Color Profiles</h2>
+<p>This one trips up designers more than casual users. When converting between formats, some tools silently strip color profile information (like sRGB or Adobe RGB). If your image looks slightly off after conversion — slightly too warm, slightly desaturated — check whether the color profile was preserved.</p>
+<h2>Mistake 7: Not Keeping the Original</h2>
+<p>Always keep your original file untouched. Make a copy and convert that. If you realize later that you chose the wrong settings, or need a different format, you still have the source to work from. Once you have converted and deleted the original, there is no going back.</p>`,
+    relatedSlugs: ['how-to-convert-png-to-jpg-without-losing-quality', 'lossless-vs-lossy-image-compression', 'webp-vs-png-vs-jpg', 'how-to-make-picture-smaller'],
+  },
+  {
+    slug: 'how-to-optimize-images-for-email',
+    title: 'How to Make Images Smaller for Email (Without Them Looking Terrible)',
+    description: 'Email attachments have size limits and most email clients compress images anyway. Here is how to prepare images so they look good and actually send.',
+    keywords: 'optimize images for email, reduce image size for email, email attachment size limit, Gmail image compression, Outlook image size',
+    date: '2026-07-10',
+    lastUpdated: null,
+    readingTime: '5 min read',
+    category: 'Tutorial',
+    image: '/blog-images/how-to-optimize-images-for-email.svg',
+    alt: 'Email compose window with image attachment showing file size reduction from 8MB to under 1MB',
+    author: 'Elena Torres',
+    takeaways: [
+      'Most email clients limit attachments to 10-25 MB total — one uncompressed photo can eat that up fast',
+      'Gmail and Outlook compress images further on the receiving end, so oversized files get double-compressed',
+      'Resize to 1200px wide and save as JPEG at 80% quality for the best balance',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>Keep total attachment size under 10 MB to be safe across all email clients.</li><li>Resize photos to 1200px on the longest side before attaching.</li><li>Save as JPEG at 80-85% quality — it will look sharp on any screen.</li></ul></div>
+<h2>Why Email and Big Photos Do Not Mix</h2>
+<p>A single photo from a modern iPhone or Android phone can easily be 3-5 MB, sometimes more if you shoot in HEIC or ProRAW. Attach three or four of those to an email and you have already hit the attachment limit for most providers. Gmail caps at 25 MB, Outlook at 20 MB, and many corporate servers set even lower limits.</p>
+<p>But the real problem is not just sending — it is receiving. Many email clients (especially mobile ones) further compress or resize images to speed up loading. This means your carefully prepared 5 MB photo might get squashed to 200 KB by Gmail, then squeezed again by the recipient's iPhone mail app. The result looks worse than if you had just sent a reasonably sized file to begin with.</p>
+<h2>The Quick Fix</h2>
+<p>Before attaching an image to an email, do two things: resize it and compress it.</p>
+<p><strong>Resizing:</strong> Most screens display images at around 1200 pixels wide at most. Sending a 4000-pixel image just wastes bandwidth because the recipient will never see it at full resolution. Resize to 1200px on the longest side. This alone can cut file size by 75% or more.</p>
+<p><strong>Compressing:</strong> Save as JPEG at 80-85% quality. At this setting, the visual difference from the original is nearly impossible to spot on a screen, but the file is typically 5-10 times smaller than a PNG.</p>
+<h2>Using PixConvert for This</h2>
+<p>Open PixConvert, drag in your photo, and do both operations at once. Set the output format to JPEG, dial quality to 82%, and use the resize option to bring the longest side down to 1200px. The whole process takes a couple of seconds, and the file stays on your machine the entire time. No uploads, no accounts.</p>
+<h2>A Few Extra Tips</h2>
+<ul>
+<li>If you are sending screenshots or graphics with text, use PNG to JPEG instead. Text gets blurry with JPEG compression.</li>
+<li>If you need to send many images, consider creating a ZIP file first. ZIP compression on already-compressed JPEGs does not help much, but it bundles everything into a single attachment.</li>
+<li>For professional settings (real estate photos, design proofs, print previews), consider using a file sharing service instead of email. Google Drive, Dropbox, and WeTransfer all handle large files better than email ever will.</li>
+</ul>`,
+    relatedSlugs: ['how-to-reduce-image-size-for-email', 'how-to-make-picture-smaller', 'how-to-compress-images-for-web', 'png-vs-jpg-best-for-web'],
+  },
+  {
+    slug: 'best-image-format-for-printing',
+    title: 'Best Image Format for Printing: JPEG vs PNG vs TIFF vs PDF',
+    description: 'Choosing the wrong format for print can waste ink, blur details, or cost you at the print shop. Here is what actually works and why.',
+    keywords: 'best image format for printing, print image format, JPEG vs TIFF for print, PNG for printing, print resolution guide',
+    date: '2026-07-05',
+    lastUpdated: null,
+    readingTime: '6 min read',
+    category: 'Guide',
+    image: '/blog-images/best-image-format-for-printing.svg',
+    alt: 'Side-by-side comparison of a printed photo showing the difference between JPEG and TIFF format output quality',
+    author: 'Marcus Webb',
+    takeaways: [
+      'TIFF is the gold standard for professional printing — lossless, widely supported by print shops',
+      'JPEG works fine for everyday printing at home if you save it at high quality (90%+)',
+      'Resolution matters more than format — aim for 300 DPI at your target print size',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>For professional print jobs, TIFF or high-resolution PDF is what most print shops prefer.</li><li>Home printing on inkjet? JPEG at 90%+ quality is perfectly fine.</li><li>300 DPI is the magic number — calculate your pixel dimensions from the print size.</li></ul></div>
+<h2>It Depends on Who Is Printing</h2>
+<p>The "best" format for printing changes depending on whether you are printing at home, sending files to a local print shop, or submitting to a professional printer. There is no single answer, but there are clear guidelines for each situation.</p>
+<h2>Home Inkjet Printing</h2>
+<p>For everyday photos on a home inkjet printer, JPEG at 90-95% quality is honestly fine. Modern inkjet printers handle JPEG input well, and the compression artifacts at this quality level are invisible at normal viewing distances. PNG works too, but the larger file size does not give you any real advantage on an inkjet.</p>
+<p>The thing that matters far more than format is resolution. A 300 DPI image at your target print size will look sharp. For a 4×6 inch print, that means at least 1200×1800 pixels. For an 8×10, you need 2400×3000. If your image has fewer pixels than that, it will look soft no matter what format you use.</p>
+<h2>Print Shops and Commercial Printing</h2>
+<p>If you are handing files to a print shop — business cards, flyers, posters, photo books — ask them what they want. Most will accept high-resolution PDF, TIFF, or sometimes PSD files. JPEG is usually acceptable too, but save it at maximum quality (95-100%) to avoid visible compression artifacts that show up more clearly on paper than on screen.</p>
+<p>TIFF remains the professional standard because it uses lossless compression. Your data is preserved exactly, with no artifacts. The files are big, but print shops are set up to handle that. If someone asks for a TIFF, they probably know what they are doing — just give them what they want.</p>
+<h2>The DPI Conversation</h2>
+<p>A lot of people get confused about DPI (dots per inch). Here is the simple version: DPI is not a property of your file. It is a relationship between pixel dimensions and physical print size. A 3000×2000 pixel image prints at 10 inches wide at 300 DPI, or 20 inches at 150 DPI. Same file, different sizes, different perceived sharpness.</p>
+<p>For most printing, 300 DPI at the final size is the target. For large format prints (banners, wall art viewed from a distance), 150 DPI is often enough because people stand further away.</p>
+<h2>What About SVG and Vector Formats?</h2>
+<p>If what you are printing is a logo, illustration, or any vector-based artwork, use SVG or request a vector PDF/AI from your designer. Vector files scale infinitely without losing sharpness. A rasterized PNG of a logo at 300 DPI might look fine at one size, but a vector will look perfect at any size.</p>`,
+    relatedSlugs: ['png-vs-jpg-best-for-web', 'lossless-vs-lossy-image-compression', 'tiff-vs-png-vs-jpeg-scanning', 'best-image-format-for-wordpress'],
+  },
+  {
+    slug: 'how-to-reduce-image-file-size-without-losing-quality',
+    title: 'How to Reduce Image File Size Without Losing Quality (Practical Methods)',
+    description: 'Your photos are too big but you do not want them to look blurry. These methods actually shrink file sizes while keeping images sharp.',
+    keywords: 'reduce image file size, shrink photo size, compress image without quality loss, smaller image files, image file size reduction',
+    date: '2026-07-02',
+    lastUpdated: null,
+    readingTime: '7 min read',
+    category: 'Tutorial',
+    image: '/blog-images/how-to-reduce-image-file-size-without-losing-quality.svg',
+    alt: 'Before and after comparison showing a 5MB photo reduced to 500KB while maintaining visual quality',
+    author: 'Alex Martinez',
+    takeaways: [
+      'Switching from PNG to JPEG for photographs typically cuts file size by 80% with barely visible quality change',
+      'Resizing pixel dimensions has the biggest impact — most photos are way bigger than needed',
+      'WebP format gives you 25-35% smaller files than JPEG at the same visual quality',
+    ],
+    contentHtml: `<div class="takeaways"><strong>Key Takeaways</strong><ul><li>The biggest wins come from resizing — most photos are 2-4x larger than they need to be.</li><li>Format choice matters: WebP is 25-35% smaller than JPEG at equivalent quality.</li><li>For web use, 80-85% JPEG quality is the sweet spot between size and appearance.</li></ul></div>
+<h2>Why Your Images Are Bigger Than They Need to Be</h2>
+<p>Modern phone cameras shoot at 12 megapixels or higher. That is a 4000×3000 pixel image. If you are posting it on a website, putting it in a document, or sharing it in a chat, you probably do not need anything close to that resolution. A website image that displays at 800 pixels wide does not need to be 4000 pixels wide. Resizing alone can cut file size by 80% or more.</p>
+<h2>Method 1: Resize the Pixel Dimensions</h2>
+<p>This is the single most effective thing you can do. A 4000×3000 JPEG at 85% quality is roughly 2.5 MB. Resize it to 1200×900 and it drops to about 300 KB. Same quality percentage, tiny file, and it looks identical on any screen that is not a 4K monitor.</p>
+<p>For web use, 1200 pixels on the longest side covers the vast majority of display scenarios. For email, 800-1000 pixels is plenty. For social media, each platform has its own recommended sizes — Instagram posts are 1080px wide, Twitter headers are 1500px.</p>
+<h2>Method 2: Switch to a Smarter Format</h2>
+<p>If you are still sending PNG files for photographs, you are leaving a lot of space on the table. A photo-quality PNG can be 10-20 MB. The same image as a JPEG at 85% quality is 200-400 KB. That is a 50x reduction for photos.</p>
+<p>Even better, WebP gives you another 25-35% savings on top of JPEG. A 300 KB JPEG becomes a 200 KB WebP with the same visual quality. The catch is that not every application opens WebP yet, but browser support is over 95% now.</p>
+<h2>Method 3: Lower the Quality Setting (Slightly)</h2>
+<p>Most people do not realize that JPEG quality settings have a nonlinear relationship with file size. Dropping from 95% to 85% quality typically cuts file size in half, while the visual difference is nearly invisible on a screen. Dropping from 85% to 75% saves another 30-40%, and the quality is still decent for web use. Below 70%, artifacts start becoming noticeable.</p>
+<h2>Method 4: Strip Metadata</h2>
+<p>Photos contain EXIF metadata — camera model, GPS coordinates, date taken, sometimes even your name. This metadata can add 10-50 KB to each file. Stripping it before sharing protects your privacy and saves a small amount of space. Most conversion tools can do this automatically.</p>
+<h2>Putting It All Together</h2>
+<p>The optimal approach combines all four methods: resize to the actual display dimensions, convert to an efficient format (WebP for web, JPEG for universal compatibility), set quality to 80-85%, and strip metadata. PixConvert handles all of this in one step, right in your browser. Upload a 5 MB photo and download a 200 KB file that looks practically identical.</p>`,
+    relatedSlugs: ['how-to-make-picture-smaller', 'how-to-compress-images-for-web', 'how-to-reduce-image-size-for-email', 'best-image-format-website-speed'],
+  },
 ]

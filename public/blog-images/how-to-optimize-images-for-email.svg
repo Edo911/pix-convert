@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0c17"/><stop offset="50%" stop-color="#131628"/><stop offset="100%" stop-color="#0d0f1f"/></linearGradient>
+    <linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#ffd93d"/></linearGradient>
+    <linearGradient id="r2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4d96ff"/><stop offset="100%" stop-color="#6bcb77"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="200" cy="500" r="200" fill="rgba(77,150,255,0.06)"/>
+  <circle cx="1000" cy="130" r="180" fill="rgba(107,203,119,0.06)"/>
+  <rect x="300" y="120" width="600" height="200" rx="20" fill="rgba(255,255,255,0.04)" stroke="url(#r1)" stroke-width="2"/>
+  <text x="600" y="190" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="url(#r1)" text-anchor="middle">Email + Images</text>
+  <text x="600" y="230" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Resize to 1200px • JPEG at 80% quality</text>
+  <text x="600" y="260" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Keep attachments under 10 MB</text>
+  <text x="600" y="420" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eaf0" text-anchor="middle">Images for Email: Make Them Smaller</text>
+  <text x="600" y="460" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Gmail limits • Outlook compression • Mobile rendering</text>
+</svg>

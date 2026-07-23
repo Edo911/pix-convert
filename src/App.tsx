@@ -5,6 +5,9 @@ import { ConversionPage } from './pages/ConversionPage'
 import { CompressPage } from './pages/CompressPage'
 import { ResizePage } from './pages/ResizePage'
 import { ToolsPage } from './pages/ToolsPage'
+import { FormatsPage } from './pages/FormatsPage'
+import { HowToPage } from './pages/HowToPage'
+import { SitemapPage } from './pages/SitemapPage'
 import { About } from './pages/About'
 import { Privacy } from './pages/Privacy'
 import { BlogIndex, BlogArticle } from './pages/blog'
@@ -51,6 +54,9 @@ export function App() {
           <Route path="/compress" element={<CompressPage />} />
           <Route path="/resize" element={<ResizePage />} />
           <Route path="/tools" element={<ToolsPage />} />
+          <Route path="/formats" element={<FormatsPage />} />
+          <Route path="/how-to" element={<HowToPage />} />
+          <Route path="/sitemap" element={<SitemapPage />} />
           {conversionRoutes.map((route) => (
             <Route
               key={route.path}
@@ -74,12 +80,15 @@ export function App() {
           <Link to="/compress">Compress</Link>
           <Link to="/resize">Resize</Link>
           <Link to="/tools">All Tools</Link>
+          <Link to="/formats">Formats</Link>
+          <Link to="/how-to">How-To Guides</Link>
           {conversionRoutes.map((r) => (
             <Link key={r.path} to={r.path}>{r.fromFormat} to {r.toFormat}</Link>
           ))}
           <Link to="/blog">Blog</Link>
           <Link to="/about">About</Link>
           <Link to="/privacy">Privacy</Link>
+          <Link to="/sitemap">Sitemap</Link>
         </div>
         <p>All processing runs locally in your browser. Files are never uploaded to a server.</p>
       </footer>

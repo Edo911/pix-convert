@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0c17"/><stop offset="50%" stop-color="#131628"/><stop offset="100%" stop-color="#0d0f1f"/></linearGradient>
+    <linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#ffd93d"/></linearGradient>
+    <linearGradient id="r2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4d96ff"/><stop offset="100%" stop-color="#6bcb77"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="180" cy="500" r="200" fill="rgba(77,150,255,0.06)"/>
+  <circle cx="1020" cy="130" r="180" fill="rgba(107,203,119,0.06)"/>
+  <rect x="200" y="140" width="320" height="160" rx="16" fill="rgba(255,255,255,0.04)" stroke="url(#r1)" stroke-width="2"/>
+  <text x="360" y="200" font-family="Arial,sans-serif" font-size="36" font-weight="700" fill="url(#r1)" text-anchor="middle">5 MB</text>
+  <text x="360" y="240" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Original photo</text>
+  <rect x="680" y="140" width="320" height="160" rx="16" fill="rgba(255,255,255,0.04)" stroke="url(#r2)" stroke-width="2"/>
+  <text x="840" y="200" font-family="Arial,sans-serif" font-size="36" font-weight="700" fill="url(#r2)" text-anchor="middle">200 KB</text>
+  <text x="840" y="240" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Optimized output</text>
+  <path d="M540 220 L660 220" stroke="#6bcb77" stroke-width="3" stroke-dasharray="8,4"/>
+  <polygon points="650,210 670,220 650,230" fill="#6bcb77"/>
+  <text x="600" y="440" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#e8eaf0" text-anchor="middle">Reduce File Size Without Losing Quality</text>
+  <text x="600" y="480" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Resize • Reformat • Adjust quality • Strip metadata</text>
+</svg>
