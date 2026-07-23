@@ -12,13 +12,9 @@ const srcHtml = readFileSync(join(DIST, 'index.html'), 'utf-8')
 // Strip any previously injected prerender tags by removing everything
 // from the last <style or <link> before </head> (i.e. the injected block)
 function cleanBase(html) {
-  // Find the last existing meta/link/script before </head>
-  // Keep only the original build output (up to the first <link> or <script> with asset/modulepreload)
-  const originalEnd = html.indexOf('<link rel="alternate"')
-  if (originalEnd === -1) return html
-  // Remove everything between the last original tag start and </head>
-  const headClose = html.indexOf('</head>')
-  return html.substring(0, originalEnd) + html.substring(headClose)
+  // Remove only the <link rel="alternate"> tags injected by the source index.html,
+  // preserving Vite-injected assets (script, modulepreload, stylesheet) that appear after them.
+  return html.replace(/<link rel="alternate"[^>]*>\n?/g, '')
 }
 
 function esc(s) {
